@@ -32,7 +32,7 @@ public class Controles : MonoBehaviour
         cRoll.setFator(1.0f);
         cYaw.setFator(1.0f);
 
-        cThrottle.setFator(1.0f);
+        cThrottle.setFator(1.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
 
     // Start is called before the first frame update
     void Start()
