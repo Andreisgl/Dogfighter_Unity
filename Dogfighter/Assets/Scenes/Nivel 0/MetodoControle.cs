@@ -6,6 +6,10 @@ namespace Aeronave
 {
 
 
+    /*
+    Essa classe é responsável por criar os métodos para a operação dos controles da aeronave.
+    Eles serão associados a entradas na classe "Controles"
+    */
 
     public class MetodoControle : MonoBehaviour
     {
