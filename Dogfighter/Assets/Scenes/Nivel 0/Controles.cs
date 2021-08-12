@@ -21,13 +21,18 @@ public class Controles : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody
 
 
-    //Objetos de declaração dos controles
-    MetodoControle cPitch = new MetodoControle{};
-    MetodoControle cRoll = new MetodoControle{};
-    MetodoControle cYaw = new MetodoControle{};
+    //Objetos de declaração dos controles:
+        MetodoControle cPitch = new MetodoControle{};
+        MetodoControle cRoll = new MetodoControle{};
+        MetodoControle cYaw = new MetodoControle{};
 
-    MetodoControle cThrust = new MetodoControle{};
+        MetodoControle cThrust = new MetodoControle{};
+    //Definição dos fatores dos controles:
+        cPitch.setFator(1.0f);
+        cRoll.setFator(1.0f);
+        cYaw.setFator(1.0f);
 
+        cThrottle.setFator(1.0f);
 
     // Start is called before the first frame update
     void Start()
