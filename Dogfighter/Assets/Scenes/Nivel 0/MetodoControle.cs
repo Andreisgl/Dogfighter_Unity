@@ -27,6 +27,23 @@ namespace Aeronave
         {
 
         }
+
+        private float fator = 0;    //Multiplica a entrada para aumentar ou diminuir a intensidade da saída. Pode ser alterado por "saidaControle()"
+
+        //Métodos de encapsulamento
+        public void setFator(float novoFator) //Permite definir externamente o fator de entrada.
+        {
+            fator = novoFator;
+        }
+
+
+        //Metodos de ação
+        public float saidaControle(float entrada)   //Recebe a entrada, o multiplica pelo fator e retorna o resultado.
+        {
+            return fator * entrada;
+        }
+
+        
     }
 
 
