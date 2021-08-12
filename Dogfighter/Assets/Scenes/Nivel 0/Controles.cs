@@ -47,6 +47,11 @@ public class Controles : MonoBehaviour
     {
         
     }
+    
+    void FixedUpdate()
+    {
+        
+    }
 }
 
 
