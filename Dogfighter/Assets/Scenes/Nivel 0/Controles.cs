@@ -7,7 +7,7 @@ namespace Aeronave
 
 
 
-public class AeroMain : MonoBehaviour
+public class Controles : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
