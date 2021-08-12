@@ -10,6 +10,10 @@ Essa classe atua em conjunto com a classe "MetodoControle".
 Ela recebe as entradas dos comandos da aeronave, os fatores,
 os passa para "MetodoControle" para cálculo
 e aplica recebe a saída para aplicar em movimentos na da aeronave.
+
+Ela também será usada para a limitação de força G e ângulo de ataque.
+
+**Ainda não tenho certeza se a usarei para calcular esses efeitos também. Provavelmente sim.
 */
 
 public class Controles : MonoBehaviour
