@@ -11,7 +11,7 @@ namespace Aeronave
     Eles serão associados a entradas na classe "Controles"
     */
 
-    public class MetodoControle : MonoBehaviour
+    public class MetodoControle //
     {
         
 
