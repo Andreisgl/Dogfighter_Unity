@@ -19,6 +19,16 @@ Ela também será usada para a limitação de força G e ângulo de ataque.
 public class Controles : MonoBehaviour
 {
     Rigidbody aero_rb;  //Cria um objeto RigidBody
+
+
+    //Objetos de declaração dos controles
+    MetodoControle cPitch = new MetodoControle{};
+    MetodoControle cRoll = new MetodoControle{};
+    MetodoControle cYaw = new MetodoControle{};
+
+    MetodoControle cThrust = new MetodoControle{};
+
+
     // Start is called before the first frame update
     void Start()
     {
