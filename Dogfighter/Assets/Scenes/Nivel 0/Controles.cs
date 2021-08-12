@@ -27,17 +27,19 @@ public class Controles : MonoBehaviour
         MetodoControle cYaw = new MetodoControle{};
 
         MetodoControle cThrottle = new MetodoControle{};
-    //Definição dos fatores dos controles:
-        cPitch.setFator(1.0f);
-        cRoll.setFator(1.0f);
-        cYaw.setFator(1.0f);
-
-        cThrottle.setFator(1.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
+    
 
     // Start is called before the first frame update
     void Start()
     {
         aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
+
+        //Definição dos fatores dos controles:
+        cPitch.setFator(1.0f);
+        cRoll.setFator(1.0f);
+        cYaw.setFator(1.0f);
+
+        cThrottle.setFator(1.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
     }
 
     // Update is called once per frame
