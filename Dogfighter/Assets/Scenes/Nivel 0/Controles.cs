@@ -26,7 +26,7 @@ public class Controles : MonoBehaviour
         MetodoControle cRoll = new MetodoControle{};
         MetodoControle cYaw = new MetodoControle{};
 
-        MetodoControle cThrust = new MetodoControle{};
+        MetodoControle cThrottle = new MetodoControle{};
     //Definição dos fatores dos controles:
         cPitch.setFator(1.0f);
         cRoll.setFator(1.0f);
