@@ -71,7 +71,9 @@ namespace Aeronave
 
             if(velLocal.y < 0)  //Se o nariz aponta para cima:
                 return Vector2.Angle( vetYZ, transform.forward );
-            else    //Se está neutro/aponta para baixo:
+            else if(velLocal.y == 0)    //Se está neutro:
+                return 0;
+            else    //Se aponta para baixo:
                 return -Vector2.Angle( -vetYZ, transform.forward );
         }
 
