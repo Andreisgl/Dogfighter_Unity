@@ -33,16 +33,18 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            testeQuaternion();
+            teste();
         }
 
-        void testeQuaternion()
+        void teste()
         {
-            Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
-            Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
+            //Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
+            //Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
 
-            Debug.Log(Quaternion.Angle(qForward, qVelLocal) /2);
+            Debug.Log(  );
         }
+
+
         //Métodos de saída:
      
 
