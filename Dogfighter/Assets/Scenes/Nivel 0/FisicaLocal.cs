@@ -37,8 +37,8 @@ namespace Aeronave
         void FixedUpdate()
         {
             calculaVelLocal();
-            Debug.Log("Aoa Vert: " + calculaAngAtqVert() );
-            Debug.Log("\tAoa Hor: " + calculaAngAtqHor() );
+            //Debug.Log("Aoa Vert: " + calculaAngAtqVert()  +  "  Aoa Hor: " + calculaAngAtqHor() );
+            Debug.Log(velLocal);
         }
 
 
