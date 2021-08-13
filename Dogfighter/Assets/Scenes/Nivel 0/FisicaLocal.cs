@@ -50,13 +50,13 @@ namespace Aeronave
 
         float calculaAngAtq(float vel1, float vel2)
         {
-            Vector2 vetYZ; //Cria vetor bidimensional cujos componentes serão usados para calcular o ângulo de ataque.
-            vetYZ = new Vector2(vel1, vel2);    //Adiciona os valores de velocidade local ao vetor.
+            Vector2 vetAux; //Cria vetor bidimensional cujos componentes serão usados para calcular o ângulo de ataque.
+            vetAux = new Vector2(vel1, vel2);    //Adiciona os valores de velocidade local ao vetor.
 
             if(vel1 < 0)  //Se o nariz aponta para cima:
-                return Vector2.Angle( vetYZ, transform.forward );
+                return Vector2.Angle( vetAux, transform.forward );
             else    //Se está neutro/aponta para baixo:
-                return -Vector2.Angle( -vetYZ, transform.forward );   
+                return -Vector2.Angle( -vetAux, transform.forward );   
         }
 
 
