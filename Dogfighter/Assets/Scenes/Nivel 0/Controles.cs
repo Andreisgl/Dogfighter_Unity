@@ -28,11 +28,13 @@ public class Controles : MonoBehaviour
 
         MetodoControle cThrottle = new MetodoControle{};
     
-
+        
     // Start is called before the first frame update
     void Start()
     {
         aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
+
+        FisicaLocal fisLocal = GetComponent<FisicaLocal>();
 
         //Definição dos fatores dos controles:  **Isso é provisório! Devo adicionar depois um script que aplica esses fatores baseado em dados pré-definidos de modelos de aeronaves!
         cPitch.setFator(1.0f);
@@ -45,7 +47,8 @@ public class Controles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log( FisicaLocal.getVelLocal() );
+        FisicaLocal fisLocal = GetComponent<FisicaLocal>();
+        Debug.Log( fisLocal.getVelLocal() );
     }
     
     void FixedUpdate()
