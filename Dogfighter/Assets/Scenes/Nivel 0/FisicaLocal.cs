@@ -37,11 +37,22 @@ namespace Aeronave
         }
 
 
+        void CalculateState(float dt, bool firstThisFrame)
+        {
+            var invRotation = Quaternion.Inverse(Rigidbody.rotation);
+            Velocity = Rigidbody.velocity;
+            LocalVelocity = invRotation * Velocity;  //transform world velocity into local space
+            LocalAngularVelocity = invRotation * Rigidbody.angularVelocity;  //transform into local space
 
+            CalculateAngleOfAttack();
 
-      
+        }
 
-
+        void CalculateAngleOfAttack()
+        {
+            AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
+            AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
+        }
         //Métodos de saída:
      
 
