@@ -34,6 +34,11 @@ namespace Aeronave
         {
             
         }
+
+        void calculaAngAtqVert()
+        {
+            
+        }
     }
 
 
