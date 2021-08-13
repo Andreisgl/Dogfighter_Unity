@@ -38,6 +38,7 @@ namespace Aeronave
         {
             calculaVelLocal();
             Debug.Log("Aoa Vert: " + calculaAngAtqVert() );
+            Debug.Log("\tAoa Hor: " + calculaAngAtqHor() );
         }
 
 
