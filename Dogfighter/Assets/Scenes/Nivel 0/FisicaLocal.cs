@@ -49,6 +49,8 @@ namespace Aeronave
             
         }
 
+
+        //Métodos de saída:
         float calculaAngAtqVert()
         {
             Vector2 vetYZ; //Cria vetor bidimensional cujas componentes representam um plano local YZ. A partir dele será calculado o ângulo de ataque
