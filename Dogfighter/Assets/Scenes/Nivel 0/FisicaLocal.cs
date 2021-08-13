@@ -36,7 +36,6 @@ namespace Aeronave
             
         }
 
-        Vector3 LocalVelocity;
      
         //Métodos de saída:
      
