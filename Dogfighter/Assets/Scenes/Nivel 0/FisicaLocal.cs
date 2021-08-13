@@ -18,7 +18,7 @@ namespace Aeronave
     {
         Rigidbody aero_rb;  //Cria um objeto RigidBody
 
-        Vector3 veloLocal;  //Vetor de velocidade local.
+        Vector3 velLocal;  //Vetor de velocidade local.
 
         // Start is called before the first frame update
         void Start()
@@ -39,8 +39,8 @@ namespace Aeronave
 
         void calculaVelLocal()
         {
-            veloLocal = transform.InverseTransformDirection(aero_rb.velocity);
-            Debug.Log(veloLocal);
+            velLocal = transform.InverseTransformDirection(aero_rb.velocity);
+            Debug.Log(velLocal);
         }
         void calculaAngAtqVert()
         {
@@ -51,9 +51,9 @@ namespace Aeronave
 
         //Métodos de encapsulamento
 
-        public Vector3 getVeloLocal()
+        public Vector3 getVelLocal()
         {
-            return veloLocal;
+            return velLocal;
         }
     }
 
