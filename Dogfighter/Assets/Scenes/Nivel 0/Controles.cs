@@ -50,6 +50,11 @@ public class Controles : MonoBehaviour
     
     void FixedUpdate()
     {
+        atualizaControles();    //Verifica os estados dos controles e os aplica.
+    }
+
+    void atualizaControles()
+    {
         //Movimentos. Passa o valor atual de um eixo como parâmetro, recebe de volta o valor multiplicado e aplica rotação na aeronave.
          aero_rb.transform.Rotate( cPitch.saidaControle(Input.GetAxis("Pitch")), 0.0f, 0.0f );
          aero_rb.transform.Rotate( 0.0f, 0.0f, -cRoll.saidaControle(Input.GetAxis("Roll")) );
