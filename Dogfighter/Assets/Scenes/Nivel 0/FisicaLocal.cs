@@ -33,11 +33,11 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-
+            
         }
 
 
-        void CalculateState(float dt, bool firstThisFrame)
+        void CalculateState()
         {
             var invRotation = Quaternion.Inverse(Rigidbody.rotation);
             Velocity = Rigidbody.velocity;
