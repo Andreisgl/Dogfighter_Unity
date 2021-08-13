@@ -20,7 +20,6 @@ namespace Aeronave
 
         Vector3 velLocal;   //Cria vetor de velocidade local.
 
-        float anguloAtqVert;
 
         // Start is called before the first frame update
         void Start()
@@ -37,7 +36,7 @@ namespace Aeronave
         void FixedUpdate()
         {
             calculaVelLocal();
-            calculaAngAtqVert();
+            Debug.Log( (velLocal.y, velLocal.z) );
         }
 
 
@@ -49,19 +48,15 @@ namespace Aeronave
             
         }
 
-        void calculaAngAtqVert()
+        float calculaAngAtq(float vel1, float vel2)
         {
-            Vector2 vetYZ; //Cria vetor bidimensional cujas componentes representam um plano local YZ. A partir dele será calculado o ângulo de ataque
+            Vector2 vetYZ; //Cria vetor bidimensional cujos componentes serão usados para calcular o ângulo de ataque.
+            vetYZ = new Vector2(vel1, vel2);    //Adiciona os valores de velocidade local ao vetor.
 
-            vetYZ = new Vector2(velLocal.y, velLocal.z);    //Adiciona os valores de velocidade local ao vetor.
-
-            if(velLocal.y < 0)  //Se o nariz aponta para cima:
-                anguloAtqVert = Vector2.Angle( vetYZ, transform.forward );
+            if(vel1 < 0)  //Se o nariz aponta para cima:
+                return Vector2.Angle( vetYZ, transform.forward );
             else    //Se está neutro/aponta para baixo:
-                anguloAtqVert = -Vector2.Angle( -vetYZ, transform.forward );
-            
-            
-            Debug.Log(anguloAtqVert);
+                return -Vector2.Angle( -vetYZ, transform.forward );   
         }
 
 
