@@ -46,6 +46,15 @@ namespace Aeronave
         {
 
         }
+
+
+
+        //Métodos de encapsulamento
+
+        public Vector3 getVeloLocal()
+        {
+            return veloLocal;
+        }
     }
 
 
