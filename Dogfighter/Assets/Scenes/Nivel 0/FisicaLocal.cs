@@ -33,7 +33,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            
+            CalculateState();
         }
 
 
