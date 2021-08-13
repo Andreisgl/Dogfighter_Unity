@@ -37,6 +37,11 @@ namespace Aeronave
             
         }
 
+        void calculaVelLocal()
+        {
+
+            
+        }
         void calculaAngAtqVert()
         {
 
