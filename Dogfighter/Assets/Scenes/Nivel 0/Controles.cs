@@ -54,6 +54,8 @@ public class Controles : MonoBehaviour
          aero_rb.transform.Rotate( cPitch.saidaControle(Input.GetAxis("Pitch")), 0.0f, 0.0f );
          aero_rb.transform.Rotate( 0.0f, 0.0f, -cPitch.saidaControle(Input.GetAxis("Roll")) );
          aero_rb.transform.Rotate( 0.0f, cPitch.saidaControle(Input.GetAxis("Yaw")), 0.0f );
+
+         aero_rb.AddForce( transform.forward * cThrottle.saidaControle(Input.GetAxis("Throttle")) );
     }
 }
 
