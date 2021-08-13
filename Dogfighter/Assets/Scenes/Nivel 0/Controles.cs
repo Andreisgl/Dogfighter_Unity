@@ -50,7 +50,10 @@ public class Controles : MonoBehaviour
     
     void FixedUpdate()
     {
-         aero_rb.transform.Rotate( cPitch.saidaControle(Input.GetAxis("Pitch")), 0.0f, 0.0f ); //Movimento de arfagem. Passa o valor atual do eixo "Pitch" como parâmetro, recebe de volta o valor multiplicado e aplica rotação na aeronave.
+        //Movimentos. Passa o valor atual de um eixo como parâmetro, recebe de volta o valor multiplicado e aplica rotação na aeronave.
+         aero_rb.transform.Rotate( cPitch.saidaControle(Input.GetAxis("Pitch")), 0.0f, 0.0f );
+         aero_rb.transform.Rotate( 0.0f, 0.0f, cPitch.saidaControle(Input.GetAxis("Roll")) );
+         aero_rb.transform.Rotate( 0.0f, cPitch.saidaControle(Input.GetAxis("Yaw")), 0.0f );
     }
 }
 
