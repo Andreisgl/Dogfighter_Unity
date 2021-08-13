@@ -34,13 +34,13 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            
+            calculaVelLocal();
         }
 
         void calculaVelLocal()
         {
-
-            
+            veloLocal = transform.InverseTransformDirection(aero_rb.velocity);
+            Debug.Log(veloLocal);
         }
         void calculaAngAtqVert()
         {
