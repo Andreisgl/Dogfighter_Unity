@@ -33,28 +33,11 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            CalculateState();
+            
         }
 
         Vector3 LocalVelocity;
-        void CalculateState()
-        {
-            var invRotation = Quaternion.Inverse(aero_rb.rotation);
-            var Velocity = aero_rb.velocity;
-            LocalVelocity = invRotation * Velocity;  //transform world velocity into local space
-            var LocalAngularVelocity = invRotation * aero_rb.angularVelocity;  //transform into local space
-
-            CalculateAngleOfAttack();
-
-        }
-
-        void CalculateAngleOfAttack()
-        {
-            var AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
-            var AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
-
-            Debug.Log("AoAVert: " + AngleOfAttack + " AoAHor: " + AngleOfAttackYaw );
-        }
+     
         //Métodos de saída:
      
 
