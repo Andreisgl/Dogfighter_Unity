@@ -28,7 +28,7 @@ namespace Aeronave
         // Update is called once per frame
         void Update()
         {
-            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            
         }
 
         void FixedUpdate()
@@ -41,6 +41,8 @@ namespace Aeronave
             //Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
             //Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
 
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            
             Debug.Log(  );
         }
 
