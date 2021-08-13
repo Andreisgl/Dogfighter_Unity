@@ -52,7 +52,7 @@ public class Controles : MonoBehaviour
     {
         //Movimentos. Passa o valor atual de um eixo como parâmetro, recebe de volta o valor multiplicado e aplica rotação na aeronave.
          aero_rb.transform.Rotate( cPitch.saidaControle(Input.GetAxis("Pitch")), 0.0f, 0.0f );
-         aero_rb.transform.Rotate( 0.0f, 0.0f, cPitch.saidaControle(Input.GetAxis("Roll")) );
+         aero_rb.transform.Rotate( 0.0f, 0.0f, -cPitch.saidaControle(Input.GetAxis("Roll")) );
          aero_rb.transform.Rotate( 0.0f, cPitch.saidaControle(Input.GetAxis("Yaw")), 0.0f );
     }
 }
