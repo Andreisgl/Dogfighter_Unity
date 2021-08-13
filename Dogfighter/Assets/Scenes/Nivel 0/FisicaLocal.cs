@@ -28,7 +28,7 @@ namespace Aeronave
         // Update is called once per frame
         void Update()
         {
-            
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
         }
 
         void FixedUpdate()
