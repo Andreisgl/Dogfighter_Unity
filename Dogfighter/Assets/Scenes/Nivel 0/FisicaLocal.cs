@@ -44,7 +44,7 @@ namespace Aeronave
             Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             
 
-            Debug.Log( Vector3.ProjectOnPlane(velLocal, transform.right) );
+            Debug.Log( transform.forward - velLocal );
         }
 
 
