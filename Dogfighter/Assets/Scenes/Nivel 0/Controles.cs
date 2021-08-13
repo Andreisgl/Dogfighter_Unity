@@ -45,7 +45,7 @@ public class Controles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log( getVelLocal() );
+        Debug.Log( FisicaLocal.getVelLocal() );
     }
     
     void FixedUpdate()
