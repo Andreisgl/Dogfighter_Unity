@@ -36,7 +36,7 @@ namespace Aeronave
         void FixedUpdate()
         {
             calculaVelLocal();
-            Debug.Log( calculaAngAtq(velLocal.y, velLocal.z) );
+            Debug.Log( getAngAtqVert() + getAngAtqHor() );
         }
 
 
@@ -60,9 +60,16 @@ namespace Aeronave
         }
 
 
-
+        //Métodos de saída
+        public float getAngAtqVert()
+        {
+            return calculaAngAtq(velLocal.y, velLocal.z);
+        }
+        public float getAngAtqHor()
+        {
+            return calculaAngAtq(velLocal.x, velLocal.z);
+        }
         //Métodos de encapsulamento
-
         public Vector3 getVelLocal()
         {
             return velLocal;
