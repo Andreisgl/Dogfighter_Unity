@@ -39,7 +39,7 @@ namespace Aeronave
         {
             fator = novoFator;
         }
-        public void getFator()
+        public float getFator()
         {
             return fator;
         }
