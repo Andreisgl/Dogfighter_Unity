@@ -40,7 +40,7 @@ namespace Aeronave
         void calculaVelLocal()
         {
             velLocal = transform.InverseTransformDirection(aero_rb.velocity);
-            Debug.Log(velLocal);
+            
         }
         void calculaAngAtqVert()
         {
