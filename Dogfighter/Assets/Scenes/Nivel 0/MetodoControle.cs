@@ -39,7 +39,7 @@ namespace Aeronave
         {
             fator = novoFator;
         }
-        public float getFator()
+        public float getFator() //Retorna o fator do eixo.
         {
             return fator;
         }
