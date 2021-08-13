@@ -60,10 +60,6 @@ namespace Aeronave
 
         //Métodos de encapsulamento
 
-        public Vector3 getVelLocal()
-        {
-            return velLocal;
-        }
     }
 
 
