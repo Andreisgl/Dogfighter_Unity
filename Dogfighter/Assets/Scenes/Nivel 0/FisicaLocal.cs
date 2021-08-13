@@ -36,7 +36,7 @@ namespace Aeronave
         void FixedUpdate()
         {
             calculaVelLocal();
-            Debug.Log( (velLocal.y, velLocal.z) );
+            Debug.Log( calculaAngAtq(velLocal.y, velLocal.z) );
         }
 
 
