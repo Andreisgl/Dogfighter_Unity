@@ -18,6 +18,8 @@ namespace Aeronave
     {
         Rigidbody aero_rb;  //Cria um objeto RigidBody
 
+        Vector3 veloLocal;  //Vetor de velocidade local.
+
         // Start is called before the first frame update
         void Start()
         {
@@ -37,7 +39,7 @@ namespace Aeronave
 
         void calculaAngAtqVert()
         {
-            
+
         }
     }
 
