@@ -52,6 +52,8 @@ namespace Aeronave
         {
             var AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
             var AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
+
+            Debug.Log("AoAVert: " + AngleOfAttack + " AoAHor: " + AngleOfAttackYaw );
         }
         //Métodos de saída:
      
