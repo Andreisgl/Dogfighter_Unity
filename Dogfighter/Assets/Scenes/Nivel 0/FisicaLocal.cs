@@ -5,7 +5,14 @@ using UnityEngine;
 namespace Aeronave
 {
 
+    /*
+    Essa classe é responsável por administrar forças e atributos físicos da aeronave como:
+        -Massa,             **PENDENTE**
+        -Velocidade local,  **PENDENTE**
+        -Ângulo de ataque,  **PENDENTE**
+        -Empuxo das asas    **PENDENTE**
 
+    */
 
     public class FisicaLocal : MonoBehaviour
     {
