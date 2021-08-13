@@ -46,7 +46,7 @@ namespace Aeronave
 
         void calculaVelLocal()
         {
-            velLocal = transform.InverseTransformDirection(aero_rb.velocity);
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             
         }
 
