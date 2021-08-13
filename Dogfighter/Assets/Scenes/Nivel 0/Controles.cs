@@ -34,8 +34,6 @@ public class Controles : MonoBehaviour
     {
         aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
 
-        FisicaLocal fisLocal = GetComponent<FisicaLocal>();
-
         //Definição dos fatores dos controles:  **Isso é provisório! Devo adicionar depois um script que aplica esses fatores baseado em dados pré-definidos de modelos de aeronaves!
         cPitch.setFator(1.0f);
         cRoll.setFator(1.0f);
