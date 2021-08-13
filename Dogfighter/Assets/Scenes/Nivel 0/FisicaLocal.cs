@@ -9,7 +9,7 @@ namespace Aeronave
     Essa classe é responsável por administrar forças e atributos físicos da aeronave como:
         -Massa,             **PENDENTE**
         -Velocidade local,  **PENDENTE**
-        -Ângulo de ataque,  **PENDENTE**
+        -Ângulo de ataque,  **EM ANDAMENTO**
         -Empuxo das asas    **PENDENTE**
 
     */
