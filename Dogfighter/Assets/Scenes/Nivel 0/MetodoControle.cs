@@ -39,6 +39,10 @@ namespace Aeronave
         {
             fator = novoFator;
         }
+        public void getFator()
+        {
+            return fator;
+        }
 
 
         //Metodos de ação
