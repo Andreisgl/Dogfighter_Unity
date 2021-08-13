@@ -38,13 +38,14 @@ namespace Aeronave
 
         void teste()
         {
-            //Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
-            //Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
+            Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
+            Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
 
-            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            //Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            
             
 
-            Debug.Log( transform.forward - velLocal );
+            Debug.Log( Quaternion.Angle( qForward, qVelLocal ) );//
         }
 
 
