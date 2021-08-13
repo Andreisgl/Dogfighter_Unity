@@ -46,7 +46,7 @@ public class Controles : MonoBehaviour
     void Update()
     {
         FisicaLocal fisLocal = GetComponent<FisicaLocal>();
-        Debug.Log( fisLocal.getVelLocal() );
+        //Debug.Log( fisLocal.getVelLocal() );
     }
     
     void FixedUpdate()
