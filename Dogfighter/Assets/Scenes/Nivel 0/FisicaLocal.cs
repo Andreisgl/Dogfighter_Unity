@@ -41,18 +41,25 @@ namespace Aeronave
             //Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
             //Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
 
-            //Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             
-            var invRotation = Quaternion.Inverse(aero_rb.rotation);
-            Vector3 Velocity = aero_rb.velocity;
-            var LocalVelocity = invRotation * Velocity;  //transform world velocity into local space
+            
+            //var invRotation = Quaternion.Inverse(aero_rb.rotation);
+            //Vector3 Velocity = aero_rb.velocity;
+            //var LocalVelocity = invRotation * Velocity;  //transform world velocity into local space
 
             //Aoa:
 
-            var AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
-            var AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
+            //var AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
+            //var AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
 
-            Debug.Log( LocalVelocity + " vs " + ( transform.InverseTransformDirection(aero_rb.velocity) ) );
+            //Debug.Log( LocalVelocity + " vs " + ( transform.InverseTransformDirection(aero_rb.velocity) ) );
+
+            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+
+            Vector3 dir = velLocal - transform.forward;
+
+            Debug.Log( dir );
+
         }
 
 
