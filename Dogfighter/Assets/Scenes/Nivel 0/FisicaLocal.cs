@@ -18,9 +18,6 @@ namespace Aeronave
     {
         Rigidbody aero_rb;  //Cria um objeto RigidBody
 
-        Vector3 velLocal;   //Cria vetor de velocidade local.
-
-        float anguloAtqVert;
 
         // Start is called before the first frame update
         void Start()
@@ -36,55 +33,43 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            calculaVelLocal();
-            Debug.Log("Aoa Vert: " + calculaAngAtqVert()  +  "  Aoa Hor: " + calculaAngAtqHor() );
-            //Debug.Log(velLocal);
+            teste();
         }
 
-
-
-
-        void calculaVelLocal()
+        void teste()
         {
-            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            //Quaternion qForward = Quaternion.LookRotation(transform.forward);   //Cria um quatérnio que aponta a posição local para frente.
+            //Quaternion qVelLocal = Quaternion.LookRotation(transform.InverseTransformDirection(aero_rb.velocity));  //Quatérnio que aponta para a velocidade local.
+
             
+            
+            //var invRotation = Quaternion.Inverse(aero_rb.rotation);
+            //Vector3 Velocity = aero_rb.velocity;
+            //var LocalVelocity = invRotation * Velocity;  //transform world velocity into local space
+
+            //Aoa:
+
+            //var AngleOfAttack = Mathf.Atan2(-LocalVelocity.y, LocalVelocity.z);
+            //var AngleOfAttackYaw = Mathf.Atan2(LocalVelocity.x, LocalVelocity.z);
+
+            //Debug.Log( LocalVelocity + " vs " + ( transform.InverseTransformDirection(aero_rb.velocity) ) );
+
+            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+
+            Vector3 dir = velLocal - transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
+
+            Debug.Log( dir );
+
         }
 
 
         //Métodos de saída:
-        float calculaAngAtqVert()
-        {
-            Vector2 vetYZ; //Cria vetor bidimensional cujas componentes representam um plano local YZ. A partir dele será calculado o ângulo de ataque
-
-            vetYZ = new Vector2(velLocal.y, velLocal.z);    //Adiciona os valores de velocidade local ao vetor.
-
-            if(velLocal.y < 0)  //Se o nariz aponta para cima:
-                return Vector2.Angle( vetYZ, transform.forward );
-            else    //Se está neutro/aponta para baixo:
-                return -Vector2.Angle( -vetYZ, transform.forward );
-        }
-        float calculaAngAtqHor()
-        {
-            Vector2 vetYZ; //Cria vetor bidimensional cujas componentes representam um plano local YZ. A partir dele será calculado o ângulo de ataque
-
-            vetYZ = new Vector2(velLocal.x, velLocal.z);    //Adiciona os valores de velocidade local ao vetor.
-
-            if(velLocal.y < 0)  //Se o nariz aponta para cima:
-                return Vector2.Angle( vetYZ, transform.forward );
-            else if(velLocal.y == 0)    //Se está neutro:
-                return 0;
-            else    //Se aponta para baixo:
-                return -Vector2.Angle( -vetYZ, transform.forward );
-        }
+     
 
 
 
         //Métodos de encapsulamento
 
-        public Vector3 getVelLocal()
-        {
-            return velLocal;
-        }
     }
 
 
