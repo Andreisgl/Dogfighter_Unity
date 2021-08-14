@@ -42,7 +42,7 @@ namespace Aeronave
 
             Vector3 dir = velLocal - transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
 
-            Debug.Log( dir );
+            Debug.Log( dir + "   |   " + velLocal);
 
         }
 
