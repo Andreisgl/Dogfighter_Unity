@@ -33,14 +33,18 @@ namespace Aeronave
 
         void FixedUpdate()
         {
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             teste();
         }
 
+        Vector3 velLocal;
+        Vector3 dir;
+
         void teste()
         {
-            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            
 
-            Vector3 dir = velLocal - transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
+            dir = velLocal - transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
 
             Debug.Log( dir + "   |   " + velLocal + "   |   " + transform.forward);
 
