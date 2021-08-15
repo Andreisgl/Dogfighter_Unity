@@ -12,6 +12,8 @@ namespace Aeronave
         -Ângulo de ataque,  **EM ANDAMENTO**
         -Empuxo das asas    **PENDENTE**
 
+    GLOSSÁRIO:
+    -AoA: Ângulo de Ataque. Ângulo do nariz da aeronave relativo à direção ao qual o ar se move relativo à aeronave.
     */
 
     public class FisicaLocal : MonoBehaviour
@@ -52,7 +54,10 @@ namespace Aeronave
 
 
         //Métodos de saída:
-     
+        float getAoA()
+        {
+
+        }
 
 
 
