@@ -37,6 +37,7 @@ namespace Aeronave
         {
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             teste();
+            Debug.Log(getAoAVert());
         }
 
         Vector3 velLocal;
@@ -48,15 +49,15 @@ namespace Aeronave
 
             dir = velLocal - transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
 
-            Debug.Log( dir + "   |   " + velLocal + "   |   " + transform.forward);
+            //Debug.Log( dir + "   |   " + velLocal + "   |   " + transform.forward);
 
         }
 
 
         //Métodos de saída:
-        float getAoA()
+        float getAoAVert()
         {
-
+            return Mathf.Atan2(dir.z, dir.y) * Mathf.Rad2Deg;    //Calcula o ângulo baseado nas componentes de "dir" e converte de radianos para graus.
         }
 
 
