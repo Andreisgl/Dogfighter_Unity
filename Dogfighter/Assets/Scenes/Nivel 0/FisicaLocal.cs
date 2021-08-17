@@ -49,12 +49,12 @@ namespace Aeronave
         //Métodos de saída:
         void getAngAtaqVert()
         {
-            dir = -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
+            return -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
         }
         
         float getAngAtaqHor()
         {
-
+            return -Mathf.Atan2(velLocal.x, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
         }
         
 
