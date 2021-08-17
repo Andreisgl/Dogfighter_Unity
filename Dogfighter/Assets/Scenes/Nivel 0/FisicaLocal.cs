@@ -45,12 +45,7 @@ namespace Aeronave
 
         void getAngAtaqVert()
         {
-            
-
             dir = -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
-
-            Debug.Log(dir);
-
         }
 
 
