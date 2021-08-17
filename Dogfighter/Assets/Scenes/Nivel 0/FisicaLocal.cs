@@ -35,7 +35,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            Debug.Log( "AoA V: " + getAngAtaqVert() + "   AoA H: " + getAngAtaqHor() );
+            Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
         }
 
         Vector3 velLocal;
@@ -48,12 +48,12 @@ namespace Aeronave
 
 
         //Métodos de saída:
-        float getAngAtaqVert()
+        float getAoAVert()
         {
             return -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
         }
         
-        float getAngAtaqHor()
+        float getAoAHor()
         {
             return -Mathf.Atan2(velLocal.x, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
         }
