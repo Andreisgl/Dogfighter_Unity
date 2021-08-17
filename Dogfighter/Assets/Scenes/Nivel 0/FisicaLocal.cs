@@ -39,7 +39,7 @@ namespace Aeronave
         }
 
         Vector3 velLocal;
-        float dir;
+       
 
         void calculaFisica()
         {
