@@ -43,19 +43,20 @@ namespace Aeronave
         Vector3 velLocal;
         float dir;
 
+        
+
+
+        //Métodos de saída:
         void getAngAtaqVert()
         {
             dir = -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
         }
-
-
-        //Métodos de saída:
-        /*
-        float getAoAVert()
+        
+        float getAngAtaqHor()
         {
 
         }
-        */
+        
 
 
 
