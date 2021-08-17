@@ -38,31 +38,21 @@ namespace Aeronave
             Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
         }
 
-        Vector3 velLocal;
-       
 
+        //VARIÁVEIS E FUNÇÕES DA FÍSICA
+        Vector3 velLocal;
         void calculaFisica()
         {
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
         }
 
-
-        //Métodos de saída:
+        //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
+            //Métodos de saída:
         public float getAoAVert()
-        {
-            return -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
-        }
+        { return -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; }//Usa tangente para calcular o arco e o converte de radianos para graus.
         
         public float getAoAHor()
-        {
-            return -Mathf.Atan2(velLocal.x, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
-        }
-        
-
-
-
-        //Métodos de encapsulamento
-
+        { return -Mathf.Atan2(velLocal.x, velLocal.z) * Mathf.Rad2Deg; } //Usa tangente para calcular o arco e o converte de radianos para graus.
     }
 
 
