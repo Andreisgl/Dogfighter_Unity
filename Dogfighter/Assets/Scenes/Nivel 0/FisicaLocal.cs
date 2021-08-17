@@ -41,15 +41,15 @@ namespace Aeronave
         }
 
         Vector3 velLocal;
-        Vector3 dir;
+        float dir;
 
         void teste()
         {
             
 
-            dir = velLocal + transform.forward; //Mostra a diferença entre o vetor de velocidade local e o vetor forward. Aparenta funcionar bem!
+            dir = -Mathf.Atan2(velLocal.y, velLocal.z) * Mathf.Rad2Deg; //Usa tangente para calcular o arco e o converte de radianos para graus.
 
-            //Debug.Log( dir + "   |   " + velLocal + "   |   " + transform.forward);
+            Debug.Log(dir);
 
         }
 
