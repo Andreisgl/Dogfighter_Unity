@@ -35,14 +35,16 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
             Debug.Log( "AoA V: " + getAngAtaqVert() + "   AoA H: " + getAngAtaqHor() );
         }
 
         Vector3 velLocal;
         float dir;
 
-        
+        void calculaFisica()
+        {
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+        }
 
 
         //Métodos de saída:
