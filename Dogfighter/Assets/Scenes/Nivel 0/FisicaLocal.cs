@@ -35,7 +35,10 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            var invRotation = Quaternion.Inverse(aero_rb.rotation);
+            velLocal = invRotation * aero_rb.velocity;
+            
+            
             Debug.Log( "AoA V: " + getAngAtaqVert() + "   AoA H: " + getAngAtaqHor() );
         }
 
