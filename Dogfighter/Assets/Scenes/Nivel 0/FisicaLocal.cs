@@ -8,9 +8,10 @@ namespace Aeronave
     /*
     Essa classe é responsável por administrar forças e atributos físicos da aeronave como:
         -Massa,             **PENDENTE**
-        -Velocidade local,  **PENDENTE**
-        -Ângulo de ataque,  **EM ANDAMENTO**
+        -Velocidade local,  **CONCLUÍDO**
+        -Ângulo de ataque,  **CONCLUÍDO**
         -Empuxo das asas    **PENDENTE**
+        -Força G            ***EM ANDAMENTO*
 
     GLOSSÁRIO:
     -AoA: Ângulo de Ataque. Ângulo do nariz da aeronave relativo à direção ao qual o ar se move relativo à aeronave.
