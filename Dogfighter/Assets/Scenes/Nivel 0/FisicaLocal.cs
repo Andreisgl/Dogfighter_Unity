@@ -44,7 +44,7 @@ namespace Aeronave
         Vector3 velLocal;
         void calculaFisica()
         {
-            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Calcula velocidade local
         }
 
         //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
