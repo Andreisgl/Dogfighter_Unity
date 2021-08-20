@@ -10,8 +10,8 @@ namespace Aeronave
         -Massa,             **PENDENTE**
         -Velocidade local,  **CONCLUÍDO**
         -Ângulo de ataque,  **CONCLUÍDO**
-        -Empuxo das asas    **PENDENTE**
-        -Força G            ***EM ANDAMENTO*
+        -Empuxo das asas    **EM ANDAMENTO**
+        -Força G            **PENDENTE**
 
     GLOSSÁRIO:
     -AoA: Ângulo de Ataque. Ângulo do nariz da aeronave relativo à direção ao qual o ar se move relativo à aeronave.
@@ -49,10 +49,7 @@ namespace Aeronave
                                                                                                     //Devo transformar esse método para usar quatérnios depois.
         }
 
-        void calculaForcaG()
-        {
-
-        }
+        //
 
         //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
             //Métodos de saída:
