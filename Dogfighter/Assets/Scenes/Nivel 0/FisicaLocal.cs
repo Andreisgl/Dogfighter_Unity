@@ -55,6 +55,7 @@ namespace Aeronave
         {
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Calcula velocidade local
                                                                                                     //Devo transformar esse método para usar quatérnios depois.
+            Debug.Log("!!!");                                                                                                    
         }
         
 
