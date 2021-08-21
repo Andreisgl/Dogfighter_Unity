@@ -39,7 +39,10 @@ namespace Aeronave
         void FixedUpdate()
         {
             calculaFisica();    //Função responsável por calcular velocidade relativa
-            Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
+            //Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
+
+            empuxoAsa();
+            Debug.Log( -Mathf.Atan2(velLocal.y, velLocal.z) );
         }
 
 
@@ -51,7 +54,14 @@ namespace Aeronave
                                                                                                     //Devo transformar esse método para usar quatérnios depois.
         }
 
-        //
+        //FUNÇÕES PARA EMPUXO DA ASA
+        public AnimationCurve curva;
+        
+        void empuxoAsa()
+        {
+            curva.AddKey(1f, 1f);
+            curva.AddKey(0f, 1f);
+        }
 
         //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
             //Métodos de saída:
