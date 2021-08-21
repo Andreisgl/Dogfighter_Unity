@@ -9,13 +9,15 @@ namespace Aeronave
 
     public class CL_AoA : MonoBehaviour
     {
-        // Start is called before the first frame update
+
+        private FisicaLocal fisicaLocal;
         void Start()
         {
+            fisicaLocal = GetComponent<FisicaLocal>();
             start_empuxoAsa();  //Inicializa os valores da curva
         }
 
-        // Update is called once per frame
+        
         void Update()
         {
             
@@ -23,7 +25,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            
+            Debug.Log( curva.Evaluate( fisicaLocal.getAoAVert() ) );
         }
 
 
