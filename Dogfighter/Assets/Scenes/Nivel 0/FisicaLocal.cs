@@ -59,8 +59,25 @@ namespace Aeronave
         
         void empuxoAsa()
         {
-            curva.AddKey(1f, 1f);
-            curva.AddKey(0f, 1f);
+            curva.AddKey(-90f, 0f);
+
+            //AoA positivo
+            curva.AddKey(0f, 0f);
+            curva.AddKey(15f, 1.2f);
+            curva.AddKey(25f, 1.6f);
+            curva.AddKey(35f, 1.9f);
+            
+            curva.AddKey(90f, 0f);
+
+            //AoA negativo
+            
+            curva.AddKey(-15f, -1.2f);
+            curva.AddKey(-25f, -1.6f);
+            curva.AddKey(-35f, -1.9f);
+            
+            curva.AddKey(-90f, 0f);
+            
+            
         }
 
         //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
