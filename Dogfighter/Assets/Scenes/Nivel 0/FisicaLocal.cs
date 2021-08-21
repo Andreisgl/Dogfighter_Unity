@@ -62,9 +62,6 @@ namespace Aeronave
         
         public float getAoAHor()
         { return -Mathf.Atan2(velLocal.x, velLocal.z) * Mathf.Rad2Deg; } //Usa tangente para calcular o arco e o converte de radianos para graus.
-
-        public float getAoAVertNorm()   //Dá o AoA ajustado para o uso com a Animation Curve
-        { return ( -Mathf.Atan2(velLocal.y, velLocal.z) /6 + 0.5f ); }
     }
 
 
