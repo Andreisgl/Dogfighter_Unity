@@ -11,6 +11,7 @@ namespace Aeronave
         -Velocidade local,  **CONCLUÍDO**
         -Ângulo de ataque,  **CONCLUÍDO**
         -Empuxo das asas    **EM ANDAMENTO**
+        -Arrasto Aerod.     **EM ANDAMENTO**
         -Força G            **PENDENTE**
 
     GLOSSÁRIO:
