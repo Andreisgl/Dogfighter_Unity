@@ -13,6 +13,7 @@ namespace Aeronave
         -Empuxo das asas    **EM ANDAMENTO**
         -Arrasto Aerod.     **EM ANDAMENTO**
         -Força G            **PENDENTE**
+        -Impulso do motor   **PENDENTE**
 
     GLOSSÁRIO:
     -AoA: Ângulo de Ataque. Ângulo do nariz da aeronave relativo à direção ao qual o ar se move relativo à aeronave.
