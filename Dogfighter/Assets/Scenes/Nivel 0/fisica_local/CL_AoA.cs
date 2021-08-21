@@ -56,7 +56,7 @@ namespace Aeronave
             //Método de saída:
             public float getClFromAoA()
             {
-                curva.Evaluate( fisicaLocal.getAoAVert() );
+                return curva.Evaluate( fisicaLocal.getAoAVert() );
             }
     }
 
