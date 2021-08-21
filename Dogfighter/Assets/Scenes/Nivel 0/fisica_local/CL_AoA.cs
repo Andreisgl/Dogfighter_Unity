@@ -25,7 +25,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            Debug.Log( curva.Evaluate( fisicaLocal.getAoAVert() ) );
+            //Debug.Log( curva.Evaluate( fisicaLocal.getAoAVert() ) );
         }
 
 
