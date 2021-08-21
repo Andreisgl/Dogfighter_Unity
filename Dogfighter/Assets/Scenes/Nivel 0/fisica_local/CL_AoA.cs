@@ -23,12 +23,11 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-
+            
         }
 
 
         public AnimationCurve curva;
-
 
         void start_empuxoAsa()
             {
@@ -48,9 +47,7 @@ namespace Aeronave
                 curva.AddKey(-25f, -1.6f);
                 curva.AddKey(-35f, -1.9f);
                 
-                curva.AddKey(-90f, 0f);
-                
-                
+                curva.AddKey(-90f, 0f); 
             }
     }
 
