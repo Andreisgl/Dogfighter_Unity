@@ -47,7 +47,7 @@ namespace Aeronave
 
 
         //VARIÁVEIS E FUNÇÕES DA FÍSICA
-        Vector3 velLocal;
+        public Vector3 velLocal;
         void calculaFisica()
         {
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Calcula velocidade local
