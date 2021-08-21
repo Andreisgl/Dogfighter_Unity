@@ -28,8 +28,6 @@ namespace Aeronave
         void Start()
         {
             aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
-
-            start_empuxoAsa();  //Inicializa os valores da curva
         }
 
         // Update is called once per frame
@@ -44,7 +42,7 @@ namespace Aeronave
             //Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
 
             
-            Debug.Log( curva.Evaluate( getAoAVert() ) );
+            
         }
 
 
@@ -55,32 +53,7 @@ namespace Aeronave
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Calcula velocidade local
                                                                                                     //Devo transformar esse método para usar quatérnios depois.
         }
-
-        //FUNÇÕES PARA EMPUXO DA ASA
-        public AnimationCurve curva;
         
-        void start_empuxoAsa()
-        {
-            curva.AddKey(-90f, 0f);
-
-            //AoA positivo
-            curva.AddKey(0f, 0f);
-            curva.AddKey(15f, 1.2f);
-            curva.AddKey(25f, 1.6f);
-            curva.AddKey(35f, 1.9f);
-            
-            curva.AddKey(90f, 0f);
-
-            //AoA negativo
-            
-            curva.AddKey(-15f, -1.2f);
-            curva.AddKey(-25f, -1.6f);
-            curva.AddKey(-35f, -1.9f);
-            
-            curva.AddKey(-90f, 0f);
-            
-            
-        }
 
         //FUNÇÕES PARA ÂNGULO DE ATAQUE (AoA)
             //Métodos de saída:
