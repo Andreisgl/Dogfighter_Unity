@@ -43,8 +43,8 @@ namespace Aeronave
             calculaFisica();    //Função responsável por calcular velocidade relativa
             //Debug.Log( "AoA V: " + getAoAVert() + "   AoA H: " + getAoAHor() );
 
-            empuxoAsa();
-            Debug.Log( getAoAVertNorm() );
+            
+            Debug.Log( curva.Evaluate( getAoAVert() ) );
         }
 
 
