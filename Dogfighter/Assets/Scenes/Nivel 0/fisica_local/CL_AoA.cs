@@ -7,7 +7,7 @@ namespace Aeronave
 {
 
 
-    public class CL_AoA
+    public class CL_AoA : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
