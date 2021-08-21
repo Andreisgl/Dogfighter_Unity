@@ -28,11 +28,9 @@ namespace Aeronave
 
         void Start()
         {
-            /*
             Aero_Main = GetComponent<Aeronave_Main>();
 
             aero_rb = Aero_Main.aero_rb;    //Considera o objeto atual o Rigidbody
-            */
         }
 
         // Update is called once per frame
@@ -49,17 +47,11 @@ namespace Aeronave
             
             
         }
-        //Função de inicialização. Substitui Start()
-        public void start_fisica()
-        {
-            Aero_Main = GetComponent<Aeronave_Main>();
 
-            aero_rb = Aero_Main.aero_rb;    //Considera o objeto atual o Rigidbody
-        }
 
         //VARIÁVEIS E FUNÇÕES DA FÍSICA
         Vector3 velLocal;
-         public void calculaFisica()
+        void calculaFisica()
         {
             velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Calcula velocidade local
                                                                                                     //Devo transformar esse método para usar quatérnios depois.
