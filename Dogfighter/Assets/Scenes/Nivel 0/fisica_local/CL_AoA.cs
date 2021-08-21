@@ -51,6 +51,13 @@ namespace Aeronave
                 
                 curva.AddKey(-90f, 0f); 
             }
+
+
+            //Método de saída:
+            public float getClFromAoA()
+            {
+                curva.Evaluate( fisicaLocal.getAoAVert() );
+            }
     }
 
 
