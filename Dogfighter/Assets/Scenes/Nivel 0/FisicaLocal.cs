@@ -28,6 +28,8 @@ namespace Aeronave
         void Start()
         {
             aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
+
+            start_empuxoAsa();  //Inicializa os valores da curva
         }
 
         // Update is called once per frame
@@ -57,7 +59,7 @@ namespace Aeronave
         //FUNÇÕES PARA EMPUXO DA ASA
         public AnimationCurve curva;
         
-        void empuxoAsa()
+        void start_empuxoAsa()
         {
             curva.AddKey(-90f, 0f);
 
