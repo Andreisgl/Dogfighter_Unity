@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Aeronave_Main : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Rigidbody aero_rb;  //Cria um objeto RigidBody
+    
     void Start()
     {
-        
+        aero_rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
