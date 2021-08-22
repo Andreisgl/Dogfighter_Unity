@@ -35,7 +35,11 @@ namespace Aeronave
         
         void Start()
         {
-            
+            //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
+            densAr = 1f;
+            vel = 1f;
+            areaAsa = 1;
+            CL = 1;
         }
 
     
