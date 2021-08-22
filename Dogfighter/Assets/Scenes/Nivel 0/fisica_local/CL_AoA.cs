@@ -25,7 +25,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            Debug.Log( getClFromAoA() );
+            //Debug.Log( getClFromAoA() );
         }
 
 
