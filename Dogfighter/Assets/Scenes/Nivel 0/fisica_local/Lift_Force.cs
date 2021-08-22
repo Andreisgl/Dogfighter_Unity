@@ -14,7 +14,21 @@ namespace Aeronave
 
     public class Lift_Force : MonoBehaviour
     {
+        /*
+            L is the resulting lift force
+            ρ (rho) is the air density
+            v is the velocity
+            A is the surface area
+            CL is the coefficient of lift
+        */
 
+        //Váriaveis para o cálculo do empuxo:
+
+        float rho = 0f; //Densidade do ar
+        float vel = 0f; //Velocidade do ar
+        float areaAsa = 0f; //Área de superfície da asa
+        float CL = 0f;  //Coeficiente de empuxo da asa
+        
         void Start()
         {
             //**Isso é provisório! Devo adicionar depois um script que aplica esses fatores baseado em dados pré-definidos de modelos de aeronaves!
