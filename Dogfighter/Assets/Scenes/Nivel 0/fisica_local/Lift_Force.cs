@@ -64,7 +64,7 @@ namespace Aeronave
 
             Debug.Log( calculaLift() );
 
-            //aero_rb.AddForce( transform.up * calculaLift() );
+            aero_rb.AddForce( transform.up * calculaLift() );
         }
 
         
