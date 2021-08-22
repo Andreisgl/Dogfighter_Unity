@@ -60,6 +60,7 @@ namespace Aeronave
         void FixedUpdate()
         {
             CL = cl_AoA.getClFromAoA();
+            vel = transform.InverseTransformDirection(aero_rb.velocity).z;
 
             Debug.Log( calculaLift() );
         }
@@ -67,7 +68,7 @@ namespace Aeronave
         
         Vector3 velLocal;
         float calculaLift()
-        {   vel = transform.InverseTransformDirection(aero_rb.velocity).z;
+        {
             // L = 0,5 . A . rho . CL . v^2
             return 0.5f * areaAsa * densAr * CL * Mathf.Pow(vel, 2);
         }
