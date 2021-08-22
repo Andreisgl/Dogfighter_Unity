@@ -28,7 +28,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            //Debug.Log( curva.Evaluate( aoa_Calc.getAoAVert() ) );
+            Debug.Log( getClFromAoA() );
         }
 
 
