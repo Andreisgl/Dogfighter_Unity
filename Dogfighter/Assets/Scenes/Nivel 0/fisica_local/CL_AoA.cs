@@ -13,10 +13,10 @@ namespace Aeronave
     public class CL_AoA : MonoBehaviour
     {
 
-        private AoA_Calc aoa_Calc;
+        private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
         void Start()
         {
-            aoa_Calc = GetComponent<AoA_Calc>();
+            aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instâncuia de AoA_Calc
             start_empuxoAsa();  //Inicializa os valores da curva
         }
 
