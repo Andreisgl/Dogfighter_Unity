@@ -24,7 +24,7 @@ namespace Aeronave
 
         //Váriaveis para o cálculo do empuxo:
 
-        float rho = 0f; //Densidade do ar
+        float densAr = 0f; //Densidade do ar
         float vel = 0f; //Velocidade do ar
         float areaAsa = 0f; //Área de superfície da asa
         float CL = 0f;  //Coeficiente de empuxo da asa
