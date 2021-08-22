@@ -36,15 +36,13 @@ namespace Aeronave
 
         void start_empuxoAsa()
             {
-                curva.AddKey(-90f, 0f);
-
                 //AoA positivo
                 curva.AddKey(0f, 0f);
                 curva.AddKey(15f, 1.2f);
                 curva.AddKey(25f, 1.6f);
                 curva.AddKey(35f, 1.9f);
                 
-                curva.AddKey(90f, 0f);
+                curva.AddKey(45f, 0f);
 
                 //AoA negativo
                 
@@ -52,7 +50,7 @@ namespace Aeronave
                 curva.AddKey(-25f, -1.6f);
                 curva.AddKey(-35f, -1.9f);
                 
-                curva.AddKey(-90f, 0f); 
+                curva.AddKey(-45f, 0f); 
             }
 
 
