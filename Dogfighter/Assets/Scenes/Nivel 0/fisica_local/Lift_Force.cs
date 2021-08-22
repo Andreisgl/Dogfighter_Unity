@@ -23,7 +23,7 @@ namespace Aeronave
 
             Formula do empuxo:
 
-            L = 0,5 . A . rho . CL . v^2
+            L = 0,5 * A * rho * CL * v^2
         */
 
         //Váriaveis para o cálculo do empuxo:
@@ -45,9 +45,10 @@ namespace Aeronave
         }
 
 
-        void calculaLift()
+        float calculaLift()
         {
-
+            // L = 0,5 . A . rho . CL . v^2
+            return 0.5f * areaAsa * densAr * CL * Mathf.Pow(vel, 2);
         }
 
 
