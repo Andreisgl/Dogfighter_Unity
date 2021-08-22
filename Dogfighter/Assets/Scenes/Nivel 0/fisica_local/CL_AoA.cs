@@ -21,10 +21,7 @@ namespace Aeronave
         }
 
         
-        void Update()
-        {
-            
-        }
+        void Update() {}
 
         void FixedUpdate()
         {
