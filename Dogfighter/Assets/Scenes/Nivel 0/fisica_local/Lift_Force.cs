@@ -28,18 +28,18 @@ namespace Aeronave
 
         //Váriaveis para o cálculo do empuxo:
 
-        float densAr = 0f; //Densidade do ar
-        float vel = 0f; //Velocidade do ar
-        float areaAsa = 0f; //Área de superfície da asa
-        float CL = 0f;  //Coeficiente de empuxo da asa
+        float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
+        float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
+        float areaAsa = 0f; //Área de superfície da asa.  (m^2 - Metro quadraado)
+        float CL = 0f;  //Coeficiente de empuxo da asa.  (Unidade sem dimensão)
         
         void Start()
         {
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
-            densAr = 1f;
-            vel = 1f;
-            areaAsa = 1;
-            CL = 1;
+            densAr = 1.201f;
+            //vel = 1f;
+            areaAsa = 28f;  //28m^2: Area da asa do F-16
+            //CL = 1;
         }
 
     
