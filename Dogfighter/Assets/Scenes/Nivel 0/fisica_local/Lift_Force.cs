@@ -66,7 +66,6 @@ namespace Aeronave
         }
 
         
-        Vector3 velLocal;
         float calculaLift()
         {
             // L = 0,5 . A . rho . CL . v^2
