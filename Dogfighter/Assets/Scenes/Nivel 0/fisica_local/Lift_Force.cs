@@ -20,6 +20,10 @@ namespace Aeronave
             v is the velocity
             A is the surface area
             CL is the coefficient of lift
+
+            Formula do empuxo:
+
+            L = 0,5 . A . rho . CL . v^2
         */
 
         //Váriaveis para o cálculo do empuxo:
@@ -39,6 +43,14 @@ namespace Aeronave
         {
             
         }
+
+
+        void calculaLift()
+        {
+
+        }
+
+
     }
 
 
