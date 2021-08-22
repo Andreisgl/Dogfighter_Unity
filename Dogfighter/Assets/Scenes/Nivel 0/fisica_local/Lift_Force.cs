@@ -31,7 +31,7 @@ namespace Aeronave
         
         void Start()
         {
-            //**Isso é provisório! Devo adicionar depois um script que aplica esses fatores baseado em dados pré-definidos de modelos de aeronaves!
+            
         }
 
     
