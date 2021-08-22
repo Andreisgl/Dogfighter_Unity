@@ -26,6 +26,7 @@ namespace Aeronave
             L = 0,5 * A * rho * CL * v^2
         */
 
+        private CL_AoA cl_AoA;
         //Váriaveis para o cálculo do empuxo:
 
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
@@ -35,17 +36,29 @@ namespace Aeronave
         
         void Start()
         {
+            cl_AoA = GetComponent<CL_AoA>();
+            //Valores das váriaveis de empuxo:
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
+            
             densAr = 1.201f;
             //vel = 1f;
             areaAsa = 28f;  //28m^2: Area da asa do F-16
             //CL = 1;
+
+
         }
 
     
         void Update()
         {
             
+        }
+
+        void FixedUpdate()
+        {
+            CL = cl_AoA.getClFromAoA();
+
+            Debug.Log( calculaLift() );
         }
 
 
