@@ -62,7 +62,9 @@ namespace Aeronave
             CL = cl_AoA.getClFromAoA();
             vel = transform.InverseTransformDirection(aero_rb.velocity).z;
 
-            //Debug.Log( calculaLift() );
+            Debug.Log( calculaLift() );
+
+            //aero_rb.AddForce( transform.up * calculaLift() );
         }
 
         
