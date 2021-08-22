@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lift_Force : MonoBehaviour
+
+namespace Aeronave
 {
 
-    void Start()
+    /**/
+
+    public class Lift_Force : MonoBehaviour
     {
-        
+
+        void Start()
+        {
+            
+        }
+
+    
+        void Update()
+        {
+            
+        }
     }
 
- 
-    void Update()
-    {
-        
-    }
+
 }
