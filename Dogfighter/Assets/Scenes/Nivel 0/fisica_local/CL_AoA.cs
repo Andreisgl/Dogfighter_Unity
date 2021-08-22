@@ -13,10 +13,10 @@ namespace Aeronave
     public class CL_AoA : MonoBehaviour
     {
 
-        private FisicaLocal fisicaLocal;
+        private AoA_Calc aoa_Calc;
         void Start()
         {
-            fisicaLocal = GetComponent<FisicaLocal>();
+            aoa_Calc = GetComponent<AoA_Calc>();
             start_empuxoAsa();  //Inicializa os valores da curva
         }
 
@@ -28,7 +28,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            //Debug.Log( curva.Evaluate( fisicaLocal.getAoAVert() ) );
+            //Debug.Log( curva.Evaluate( aoa_Calc.getAoAVert() ) );
         }
 
 
@@ -59,7 +59,7 @@ namespace Aeronave
             //Método de saída:
             public float getClFromAoA()
             {
-                return curva.Evaluate( fisicaLocal.getAoAVert() );
+                return curva.Evaluate( aoa_Calc.getAoAVert() );
             }
     }
 

@@ -19,7 +19,7 @@ namespace Aeronave
     -AoA: Ângulo de Ataque. Ângulo do nariz da aeronave relativo à direção ao qual o ar se move relativo à aeronave.
     */
 
-    public class FisicaLocal : MonoBehaviour
+    public class AoA_Calc : MonoBehaviour
     {
         Rigidbody aero_rb;  //Cria um objeto RigidBody
 

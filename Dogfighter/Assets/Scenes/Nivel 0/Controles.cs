@@ -45,8 +45,8 @@ public class Controles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FisicaLocal fisLocal = GetComponent<FisicaLocal>();
-        //Debug.Log( fisLocal.getVelLocal() );
+        AoA_Calc aoa_Calc = GetComponent<AoA_Calc>();
+        //Debug.Log( aoa_Calc.getVelLocal() );
     }
     
     void FixedUpdate()
