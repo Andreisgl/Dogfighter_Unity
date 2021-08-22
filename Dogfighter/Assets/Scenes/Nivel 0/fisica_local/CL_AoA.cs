@@ -6,6 +6,9 @@ using UnityEngine;
 namespace Aeronave
 {
 
+    /*
+        Essa classe calcula o Coeficiente de Empuxo (CL) da asa baseado no Ângulo de Ataque (AoA).
+    */
 
     public class CL_AoA : MonoBehaviour
     {
