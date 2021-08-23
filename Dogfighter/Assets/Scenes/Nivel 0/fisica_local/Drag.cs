@@ -64,7 +64,7 @@ namespace Aeronave
         public AnimationCurve curvaAreaZX;  //Indicará a interpolação dos valores ao girarem no eixo Y. (Frente e trás, cima e baixo)
         public AnimationCurve curvaAreaZY;  //Indicará a interpolação dos valores ao girarem no eixo X. (Frente e trás, esquerda e direita)
 
-        void inicializaCurvasArea()   //Inicializa os valores das curvas de animação
+        void inicializaCurvasArea()   //Inicializa os valores de Área das curvas de animação
         {
             //Gira no sentido horário. Pega dados de AoA Horizontal.
             curvaAreaZX.AddKey(0f, areaCorpo[0]); //Frente
@@ -79,7 +79,22 @@ namespace Aeronave
             curvaAreaZY.AddKey(180f, areaCorpo[1]); //Trás
 
             curvaAreaZY.AddKey(-90f, areaCorpo[5]); //Baixo
-            
+        }
+        void inicializaCurvasCD()   //Inicializa os valores de CD das curvas de animação
+        {
+            //Gira no sentido horário. Pega dados de AoA Horizontal.
+            curvaAreaZX.AddKey(0f, cdCorpo[0]); //Frente
+            curvaAreaZX.AddKey(90f, cdCorpo[2]); //Direita
+            curvaAreaZX.AddKey(180f, cdCorpo[1]); //Trás
+
+            curvaAreaZX.AddKey(-90f, cdCorpo[3]); //Esquerda
+
+            //Gira no sentido horário. Pega dados de AoA Vertical.
+            curvaAreaZY.AddKey(0f, cdCorpo[0]); //Frente
+            curvaAreaZY.AddKey(90f, cdCorpo[4]); //Cima
+            curvaAreaZY.AddKey(180f, cdCorpo[1]); //Trás
+
+            curvaAreaZY.AddKey(-90f, cdCorpo[5]); //Baixo
         }
         void calculaDrag()
         {
