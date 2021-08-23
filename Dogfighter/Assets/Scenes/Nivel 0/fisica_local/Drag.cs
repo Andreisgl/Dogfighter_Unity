@@ -83,14 +83,18 @@ namespace Aeronave
             //Gira no sentido horário. Pega dados de AoA Horizontal.
             curvaAreaZX.AddKey(0f, areaCorpo[0]); //Frente
             curvaAreaZX.AddKey(90f, areaCorpo[2]); //Direita
+
             curvaAreaZX.AddKey(180f, areaCorpo[1]); //Trás
+            curvaAreaZX.AddKey(-180f, areaCorpo[1]); //Trás, só que vindo do negativo
 
             curvaAreaZX.AddKey(-90f, areaCorpo[3]); //Esquerda
 
             //Gira no sentido horário. Pega dados de AoA Vertical.
             curvaAreaZY.AddKey(0f, areaCorpo[0]); //Frente
             curvaAreaZY.AddKey(90f, areaCorpo[4]); //Cima
+            
             curvaAreaZY.AddKey(180f, areaCorpo[1]); //Trás
+            curvaAreaZY.AddKey(-180f, areaCorpo[1]); //Trás, só que vindo do negativo
 
             curvaAreaZY.AddKey(-90f, areaCorpo[5]); //Baixo
         }
@@ -99,14 +103,18 @@ namespace Aeronave
             //Gira no sentido horário. Pega dados de AoA Horizontal.
             curvaCDZX.AddKey(0f, cdCorpo[0]); //Frente
             curvaCDZX.AddKey(90f, cdCorpo[2]); //Direita
-            curvaCDZX.AddKey(180f, cdCorpo[1]); //Trás
+
+            curvaCDZX.AddKey(180f, cdCorpo[1]); //Trás só que vindo do negativo
+            curvaCDZX.AddKey(-180f, cdCorpo[1]); //Trás só que vindo do negativo
 
             curvaCDZX.AddKey(-90f, cdCorpo[3]); //Esquerda
 
             //Gira no sentido horário. Pega dados de AoA Vertical.
             curvaCDZY.AddKey(0f, cdCorpo[0]); //Frente
             curvaCDZY.AddKey(90f, cdCorpo[4]); //Cima
+
             curvaCDZY.AddKey(180f, cdCorpo[1]); //Trás
+            curvaCDZY.AddKey(-180f, cdCorpo[1]); //Trás só que vindo do negativo
 
             curvaCDZY.AddKey(-90f, cdCorpo[5]); //Baixo
         }
