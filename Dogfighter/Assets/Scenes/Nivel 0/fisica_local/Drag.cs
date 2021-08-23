@@ -55,11 +55,6 @@ namespace Aeronave
                 cdCorpo[3] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
                 cdCorpo[4] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
                 cdCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
-            
-            //CD = 0f;
-
-            inicializaCurvasArea();
-            inicializaCurvasCD();
         }
 
         
@@ -70,7 +65,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            
+
         }
 
   
