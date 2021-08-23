@@ -62,6 +62,8 @@ namespace Aeronave
         void calculaDrag()
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
+
+            
         }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
