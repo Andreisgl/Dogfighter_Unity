@@ -14,6 +14,7 @@ namespace Aeronave
 
     public class Drag : MonoBehaviour
     {
+        Rigidbody aero_rb;  //Cria um objeto RigidBody
         
         //Váriaveis para o cálculo do arrasto:
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
@@ -24,6 +25,8 @@ namespace Aeronave
 
         void Start()
         {
+            aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
+
             
         }
 
