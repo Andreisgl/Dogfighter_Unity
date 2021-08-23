@@ -65,9 +65,25 @@ namespace Aeronave
 
         void FixedUpdate()
         {
+            velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );
 
+            Debug.Log( velLocal );
+
+            atualizaVetor();
         }
 
+        Vector3 velLocal;
+
+        void atualizaVetor()
+        {
+            if( velLocal.z > 0 )    //Se move para frente
+                Debug.Log("Frente");
+            else if( velLocal.z < 0 ) //Se move para trás
+                Debug.Log("Trás");
+            else                      //Não se move
+                Debug.Log("Neutro");
+
+        }
   
     }
 
