@@ -143,6 +143,8 @@ namespace Aeronave
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
+            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Servirá para indicar a direção da força
+
             //Área:
             //curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())
 
