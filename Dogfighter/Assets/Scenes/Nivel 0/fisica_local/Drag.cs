@@ -129,12 +129,13 @@ namespace Aeronave
 
             curvaCDZY.AddKey(-90f, cdCorpo[5]); //Baixo
         }
-        void calculaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas de inicializaCurvasArea() e inicializaCurvasCD().
+        void calculaDragVert()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
 
         }
+        void calculaDragHor()   //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas HORIZONTAIS de inicializaCurvasArea() e inicializaCurvasCD().
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
         {
