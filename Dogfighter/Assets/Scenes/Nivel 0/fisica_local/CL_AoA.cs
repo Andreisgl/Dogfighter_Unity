@@ -8,6 +8,8 @@ namespace Aeronave
 
     /*
         Essa classe calcula o Coeficiente de Empuxo (CL) da asa baseado no Ângulo de Ataque (AoA).
+
+        TODO: Mudar o nome da curva para algo mais apropriado.
     */
 
     public class CL_AoA : MonoBehaviour
