@@ -40,6 +40,11 @@ namespace Aeronave
         {
             
         }
+
+        void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
+        {
+
+        }
     }
 
 
