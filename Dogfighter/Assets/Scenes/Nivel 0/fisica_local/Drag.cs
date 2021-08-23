@@ -133,9 +133,22 @@ namespace Aeronave
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
+            //Área:
+            //curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())
 
+            //CD
+            //curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
         }
         void calculaDragHor()   //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas HORIZONTAIS de inicializaCurvasArea() e inicializaCurvasCD().
+        {
+            //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
+
+            //Área:
+            //curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())
+
+            //CD
+            //curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
+        }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
         {
