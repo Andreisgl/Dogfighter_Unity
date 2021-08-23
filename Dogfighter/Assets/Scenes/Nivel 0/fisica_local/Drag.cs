@@ -69,7 +69,7 @@ namespace Aeronave
         }
 
         void FixedUpdate()
-        {
+        {/*
             Debug.Log
             (
                 "Area ZX: " + curvaAreaZX.Evaluate(aoa_Calc.getAoAHor()) +
@@ -79,6 +79,7 @@ namespace Aeronave
                 "  CD ZY: " + curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
 
             );
+            */
 
             aplicaDrag();
         }
@@ -136,34 +137,19 @@ namespace Aeronave
         {
             //VERTICAL
             //Área: curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())  -  CD: curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
-            float auxArrastoVert = 
-                calculaArrasto( curvaAreaZY.Evaluate(aoa_Calc.getAoAVert()), curvaCDZY.Evaluate(aoa_Calc.getAoAVert()) );   //Intensidade calculada...
-            
-            if ( aoa_Calc.getAoAVert() < 0 )
-                auxArrastoVert = auxArrastoVert * -1f; //Inverte a intensidade se o AoA for negativo
-
 
             //HORIZONTAL
             //Área: curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())  -  CD: curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
-            float auxArrastoHor = 
-                calculaArrasto( curvaAreaZX.Evaluate(aoa_Calc.getAoAHor()), curvaCDZX.Evaluate(aoa_Calc.getAoAHor()) );
-
-            if ( aoa_Calc.getAoAHor() < 0 )
-                auxArrastoHor = auxArrastoHor * -1f;//Inverte a intensidade se o AoA for negativo
-
-            //Direcionamento da força:
-            aero_rb.AddForce( transform.up * auxArrastoVert );  //Vertical.
-            aero_rb.AddForce( transform.right * auxArrastoHor );  //Horizontal.
 
         }
         
-        Vector3 velLocal; // = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Servirá para indicar a direção da força
+        
 
         float calculaArrasto(float area, float cd) //Calcula o arrasto e retorna a INTENSIDADE da força em N (Newton).
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
-            vel 
-            return 0.5f * densAr * Mathf.Pow(vel, 2) * area * cd;
+
+            return 0.5f * /*densAr * Mathf.Pow(velLocal, 2) * */ area * cd;
         }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
