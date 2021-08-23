@@ -51,6 +51,8 @@ namespace Aeronave
                 cdCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
             
             //CD = 0f;
+
+            inicializaCurvas();
         }
 
         
@@ -65,11 +67,12 @@ namespace Aeronave
         void inicializaCurvas()   //Inicializa os valores das curvas de animação
         {
             //Gira no sentido horário. Pega dados de AoA Horizontal.
-            curvaZX.AddKey(0f, 0f); //Frente
-            curvaZX.AddKey(0f, 0f); //Direita
-            curvaZX.AddKey(0f, 0f); //Trás
-            curvaZX.AddKey(0f, 0f); //Esquerda
-            curvaZX.AddKey(0f, 0f); //Frente
+            curvaZX.AddKey(0f, areaCorpo[0]); //Frente
+            curvaZX.AddKey(90f, areaCorpo[2]); //Direita
+            curvaZX.AddKey(180f, areaCorpo[1]); //Trás
+
+            curvaZX.AddKey(-90f, areaCorpo[3]); //Esquerda
+            
         }
         void calculaDrag()
         {
