@@ -75,12 +75,18 @@ namespace Aeronave
         Vector3 velLocal;
         
 
-        void atualizaVetor()
+        void atualizaVetor()    //Essa função retorna ÁREA * CD para o cálculo da força de arrasto. Os outros valores (Velocidade e sua direção, densidade do ar) são adicionados posteriormente.
         {
             Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
-            float aux = 
-                velNorm.z * areaCorpo[0] * cdCorpo[0];
-            Debug.Log( aux );
+
+            Vector3 drag;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
+            drag.z = velNorm.z * areaCorpo[0] * cdCorpo[0];
+            drag.x = velNorm.x * areaCorpo[2] * cdCorpo[2];
+            drag.y = velNorm.y * areaCorpo[4] * cdCorpo[4];
+            
+
+
+            Debug.Log( drag.magnitude );
         }
   
     }
