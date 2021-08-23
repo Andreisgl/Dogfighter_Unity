@@ -20,6 +20,7 @@ namespace Aeronave
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
         float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
         float[] areaCorpo = new float[6]; //Área de superfície do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
+                                          //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
         float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
 
 
