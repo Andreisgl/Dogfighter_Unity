@@ -41,8 +41,8 @@ namespace Aeronave
             densAr = 1.201f;
             //vel = 0f;
                 //Define provisoriamente os valores do vetor de áreas do corpo.
-                areaCorpo[0] = 0.5f * 28f;  //1,5x a área das asas, no olhômetro    
-                areaCorpo[1] = 0.5f * 28f;  //1,5x a área das asas, no olhômetro  
+                areaCorpo[0] = 0.25f * 28f;  //0,25x a área das asas, no olhômetro    
+                areaCorpo[1] = 0.25f * 28f;  //0,25x a área das asas, no olhômetro  
                 areaCorpo[2] = 2f * 28f;  //2x a área das asas, no olhômetro
                 areaCorpo[3] = 2f * 28f;  //2x a área das asas, no olhômetro
                 areaCorpo[4] = 3f * 28f;    //3x a área das asas, no olhômetro
