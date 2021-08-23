@@ -6,7 +6,8 @@ namespace Aeronave
 {
 
     /*
-        Essa classe calcula a força de Arrasto (Drag) de acordo com a orientação da aeronave relativa ao vetor de velocidade local
+        Essa classe calcula a força de Arrasto (Drag) de acordo com a orientação da aeronave relativa ao vetor de velocidade local.
+        Isso é obtido interpolando os valores de Área e CD dos 6 lados da aeronave baseado no Ângulo de Ataque da aeronave.
 
         Essa classe futuramente precisará de dados de:
         -Densidade do ar ambiente
