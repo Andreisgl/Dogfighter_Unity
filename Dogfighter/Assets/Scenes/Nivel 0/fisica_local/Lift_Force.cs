@@ -11,7 +11,7 @@ namespace Aeronave
         -Ângulo de Ataque(AoA): Calculado na classe AoA_Calc.
         -Coeficiente de Empuxo(CL): Calculado na classe CL_AoA.
 
-        Essa clase futuramente precisará de dados de:
+        Essa classe futuramente precisará de dados de:
         -Densidade do ar ambiente
     */
 
