@@ -53,6 +53,7 @@ namespace Aeronave
             //CD = 0f;
 
             inicializaCurvasArea();
+            inicializaCurvasCD();
         }
 
         
