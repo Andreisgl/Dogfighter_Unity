@@ -129,27 +129,38 @@ namespace Aeronave
 
             curvaCDZY.AddKey(-90f, cdCorpo[5]); //Baixo
         }
-        void calculaDragVert()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
+        
+        void aplicaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
-            //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
-
+            //VERTICAL
             //Área:
             //curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())
 
             //CD
             //curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
-        }
-        void calculaDragHor()   //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas HORIZONTAIS de inicializaCurvasArea() e inicializaCurvasCD().
-        {
-            //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
-            Vector3 velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Servirá para indicar a direção da força
+            calculaArrasto( curvaAreaZY.Evaluate(aoa_Calc.getAoAVert()), curvaCDZY.Evaluate(aoa_Calc.getAoAVert()) );   //Intensidade calculada...
+            
+            float aux = (aoa_Calc.getAoAVert() / -aoa_Calc.getAoAVert()) ;
 
+
+            //HORIZONTAL
             //Área:
             //curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())
 
             //CD
             //curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
+
+
+        }
+        
+        Vector3 velLocal; // = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Servirá para indicar a direção da força
+
+        float calculaArrasto(float area, float cd) //Calcula o arrasto e retorna a INTENSIDADE da força em N (Newton).
+        {
+            //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
+
+            return 0.5f * densAr * Mathf.Pow(vel, 2) * area * cd;
         }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
