@@ -133,6 +133,7 @@ namespace Aeronave
             curvaCDZY.AddKey(-90f, cdCorpo[5]); //Baixo
         }
         
+        Vector3 velLocal;
         void aplicaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
             //VERTICAL
@@ -140,7 +141,10 @@ namespace Aeronave
 
             //HORIZONTAL
             //Área: curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())  -  CD: curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
+            
+            velLocal = transform.InverseTransformDirection(aero_rb.velocity);
 
+            Debug.Log( velLocal.magnitude );
         }
         
         
