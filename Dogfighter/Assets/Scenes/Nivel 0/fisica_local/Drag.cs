@@ -64,7 +64,12 @@ namespace Aeronave
 
         void inicializaCurvas()   //Inicializa os valores das curvas de animação
         {
-
+            //Gira no sentido horário. Pega dados de AoA Horizontal.
+            curvaZX.AddKey(0f, 0f); //Frente
+            curvaZX.AddKey(0f, 0f); //Direita
+            curvaZX.AddKey(0f, 0f); //Trás
+            curvaZX.AddKey(0f, 0f); //Esquerda
+            curvaZX.AddKey(0f, 0f); //Frente
         }
         void calculaDrag()
         {
