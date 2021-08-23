@@ -14,6 +14,9 @@ namespace Aeronave
 
     public class Drag : MonoBehaviour
     {
+        //Componentes de outras classes:
+            private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
+
         Rigidbody aero_rb;  //Cria um objeto RigidBody
         
         //Váriaveis para o cálculo do arrasto:
@@ -30,6 +33,8 @@ namespace Aeronave
         {
             aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
 
+            //Componentes de outras classes:
+                aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instâncuia de AoA_Calc
             //Valores das váriaveis de arrasto:
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
             densAr = 1.201f;
