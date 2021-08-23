@@ -69,89 +69,11 @@ namespace Aeronave
         }
 
         void FixedUpdate()
-        {/*
-            Debug.Log
-            (
-                "Area ZX: " + curvaAreaZX.Evaluate(aoa_Calc.getAoAHor()) +
-                "  CD ZX: " + curvaCDZX.Evaluate(aoa_Calc.getAoAHor()) +
-
-                "      Area ZY: " + curvaAreaZY.Evaluate(aoa_Calc.getAoAVert()) +
-                "  CD ZY: " + curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
-
-            );
-            */
-
-            aplicaDrag();
-        }
-
-        //Curvas de área:
-        public AnimationCurve curvaAreaZX;  //Indicará a interpolação dos valores de área ao girarem no eixo Y (Horizontal). (Frente e trás, cima e baixo)
-        public AnimationCurve curvaAreaZY;  //Indicará a interpolação dos valores de área ao girarem no eixo X (Vertical). (Frente e trás, esquerda e direita)
-
-        public AnimationCurve curvaCDZX;  //Indicará a interpolação dos valores de CD ao girarem no eixo Y (Horizontal). (Frente e trás, cima e baixo)
-        public AnimationCurve curvaCDZY;  //Indicará a interpolação dos valores de CD ao girarem no eixo X (Vertical). (Frente e trás, esquerda e direita)
-
-        //Curvas de CD:
-        void inicializaCurvasArea()   //Inicializa os valores de Área das curvas de animação
-        {
-            //Gira no sentido horário. Pega dados de AoA Horizontal.
-            curvaAreaZX.AddKey(0f, areaCorpo[0]); //Frente
-            curvaAreaZX.AddKey(90f, areaCorpo[2]); //Direita
-
-            curvaAreaZX.AddKey(180f, areaCorpo[1]); //Trás
-            curvaAreaZX.AddKey(-180f, areaCorpo[1]); //Trás, só que vindo do negativo
-
-            curvaAreaZX.AddKey(-90f, areaCorpo[3]); //Esquerda
-
-            //Gira no sentido horário. Pega dados de AoA Vertical.
-            curvaAreaZY.AddKey(0f, areaCorpo[0]); //Frente
-            curvaAreaZY.AddKey(90f, areaCorpo[4]); //Cima
-            
-            curvaAreaZY.AddKey(180f, areaCorpo[1]); //Trás
-            curvaAreaZY.AddKey(-180f, areaCorpo[1]); //Trás, só que vindo do negativo
-
-            curvaAreaZY.AddKey(-90f, areaCorpo[5]); //Baixo
-        }
-        void inicializaCurvasCD()   //Inicializa os valores de CD das curvas de animação
-        {
-            //Gira no sentido horário. Pega dados de AoA Horizontal.
-            curvaCDZX.AddKey(0f, cdCorpo[0]); //Frente
-            curvaCDZX.AddKey(90f, cdCorpo[2]); //Direita
-
-            curvaCDZX.AddKey(180f, cdCorpo[1]); //Trás
-            curvaCDZX.AddKey(-180f, cdCorpo[1]); //Trás só que vindo do negativo
-
-            curvaCDZX.AddKey(-90f, cdCorpo[3]); //Esquerda
-
-            //Gira no sentido horário. Pega dados de AoA Vertical.
-            curvaCDZY.AddKey(0f, cdCorpo[0]); //Frente
-            curvaCDZY.AddKey(90f, cdCorpo[4]); //Cima
-
-            curvaCDZY.AddKey(180f, cdCorpo[1]); //Trás
-            curvaCDZY.AddKey(-180f, cdCorpo[1]); //Trás só que vindo do negativo
-
-            curvaCDZY.AddKey(-90f, cdCorpo[5]); //Baixo
-        }
-        
-        Vector3 velLocal;
-        void aplicaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
             
         }
-        
-        
 
-        float calculaArrasto(float area, float cd) //Calcula o arrasto SEM A VELOCIDADE. Deve-se multiplicar depois.
-        {
-            //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
-
-            return 0.5f * densAr * Mathf.Pow(vel, 2) * area * cd;
-        }
-
-        void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
-        {
-            //Essa função receberá valores automaticamente e será útil no futuro.
-        }
+  
     }
 
 
