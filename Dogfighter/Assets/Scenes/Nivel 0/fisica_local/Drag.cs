@@ -42,7 +42,7 @@ namespace Aeronave
                 areaCorpo[4] = 3f * 28f;    //3x a área das asas, no olhômetro
                 areaCorpo[5] = 3f * 28f;    //3x a área das asas, no olhômetro
                 
-                //Define provisoriamente os valores do vetor de CD do corpo.
+                //Define provisoriamente os valores do CD do corpo.
                 areaCorpo[0] = 0.0175f; //Valor obtido na internet
                 areaCorpo[1] = 0.0175f; //Coloquei o mesmo do outro por preguiça
                 areaCorpo[2] = 1.98f;   //Valor de uma chapa paralela ao fluxo.
