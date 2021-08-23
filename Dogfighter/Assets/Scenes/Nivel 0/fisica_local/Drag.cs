@@ -59,11 +59,13 @@ namespace Aeronave
             
         }
 
+        public AnimationCurve curvaZX;  //Indicará a interpolação dos valores ao girarem no eixo X. (Frente e trás, cima e baixo)
+        public AnimationCurve curvaZY;  //Indicará a interpolação dos valores ao girarem no eixo Y. (Frente e trás, esquerda e direita)
         void calculaDrag()
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
-            
+
         }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
