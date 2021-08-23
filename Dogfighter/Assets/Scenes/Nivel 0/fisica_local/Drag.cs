@@ -15,6 +15,13 @@ namespace Aeronave
     public class Drag : MonoBehaviour
     {
         
+        //Váriaveis para o cálculo do arrasto:
+        float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
+        float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
+        float areaCorpo = 0f; //Área de superfície do corpo do avião.  (m^2 - Metro quadrado)
+        float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
+
+
         void Start()
         {
             
