@@ -21,7 +21,7 @@ namespace Aeronave
         float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
         float[] areaCorpo = new float[6]; //Área de superfície do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
                                           //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
-        float[] CDCorpo = new float[6];   //Coeficiente de arrasto do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
+        float[] cdCorpo = new float[6];   //Coeficiente de arrasto do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
                                           //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
         //float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
 
@@ -43,12 +43,12 @@ namespace Aeronave
                 areaCorpo[5] = 3f * 28f;    //3x a área das asas, no olhômetro
                 
                 //Define provisoriamente os valores do CD do corpo.
-                areaCorpo[0] = 0.0175f; //Valor obtido na internet
-                areaCorpo[1] = 0.0175f; //Coloquei o mesmo do outro por preguiça
-                areaCorpo[2] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
-                areaCorpo[3] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
-                areaCorpo[4] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
-                areaCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                cdCorpo[0] = 0.0175f; //Valor obtido na internet
+                cdCorpo[1] = 0.0175f; //Coloquei o mesmo do outro por preguiça
+                cdCorpo[2] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                cdCorpo[3] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                cdCorpo[4] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                cdCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
             
             //CD = 0f;
         }
