@@ -79,6 +79,8 @@ namespace Aeronave
                 "  CD ZY: " + curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
 
             );
+
+            aplicaDrag();
         }
 
         //Curvas de área:
@@ -133,24 +135,25 @@ namespace Aeronave
         void aplicaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
             //VERTICAL
-            //Área:
-            //curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())
-
-            //CD
-            //curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
-
-            calculaArrasto( curvaAreaZY.Evaluate(aoa_Calc.getAoAVert()), curvaCDZY.Evaluate(aoa_Calc.getAoAVert()) );   //Intensidade calculada...
+            //Área: curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())  -  CD: curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
+            float auxArrastoVert = 
+                calculaArrasto( curvaAreaZY.Evaluate(aoa_Calc.getAoAVert()), curvaCDZY.Evaluate(aoa_Calc.getAoAVert()) );   //Intensidade calculada...
             
-            float aux = (aoa_Calc.getAoAVert() / -aoa_Calc.getAoAVert()) ;
+            if ( aoa_Calc.getAoAVert() < 0 )
+                auxArrastoVert = auxArrastoVert * -1f; //Inverte a intensidade se o AoA for negativo
 
 
             //HORIZONTAL
-            //Área:
-            //curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())
+            //Área: curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())  -  CD: curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
+            float auxArrastoHor = 
+                calculaArrasto( curvaAreaZX.Evaluate(aoa_Calc.getAoAHor()), curvaCDZX.Evaluate(aoa_Calc.getAoAHor()) );
 
-            //CD
-            //curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
+            if ( aoa_Calc.getAoAHor() < 0 )
+                auxArrastoHor = auxArrastoHor * -1f;//Inverte a intensidade se o AoA for negativo
 
+            //Direcionamento da força:
+            aero_rb.AddForce( transform.up * auxArrastoVert );  //Vertical.
+            aero_rb.AddForce( transform.right * auxArrastoHor );  //Horizontal.
 
         }
         
@@ -159,7 +162,7 @@ namespace Aeronave
         float calculaArrasto(float area, float cd) //Calcula o arrasto e retorna a INTENSIDADE da força em N (Newton).
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
-
+            vel 
             return 0.5f * densAr * Mathf.Pow(vel, 2) * area * cd;
         }
 
