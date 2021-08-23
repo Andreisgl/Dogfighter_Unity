@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 651956177}
   - component: {fileID: 651956178}
   - component: {fileID: 651956179}
+  - component: {fileID: 651956180}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -650,6 +651,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a7b3e3486c01f4d847c56c8a177a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &651956180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651956172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3f8950e16efe54fa90fff58b7d77f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curvaAreaZX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curvaAreaZY:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curvaCDZX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curvaCDZY:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
