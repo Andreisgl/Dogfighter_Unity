@@ -136,20 +136,25 @@ namespace Aeronave
         Vector3 velLocal;
         void aplicaDrag()  //Calcula o arrasto baseado nos valores de Área e CD obtidos das curvas VERTICAIS de inicializaCurvasArea() e inicializaCurvasCD().
         {
+            velLocal = transform.InverseTransformDirection(aero_rb.velocity);
+            
             //VERTICAL
             //Área: curvaAreaZY.Evaluate(aoa_Calc.getAoAVert())  -  CD: curvaCDZY.Evaluate(aoa_Calc.getAoAVert())
+            
 
             //HORIZONTAL
             //Área: curvaAreaZX.Evaluate(aoa_Calc.getAoAHor())  -  CD: curvaCDZX.Evaluate(aoa_Calc.getAoAHor())
             
-            velLocal = transform.InverseTransformDirection(aero_rb.velocity);
+            
 
-            Debug.Log( velLocal.magnitude );
+                    Debug.Log( velLocal.magnitude );
+
+            
         }
         
         
 
-        float calculaArrasto(float area, float cd) //Calcula o arrasto e retorna a INTENSIDADE da força em N (Newton).
+        float calculaArrasto(float area, float cd) //Calcula o arrasto SEM A VELOCIDADE. Deve-se multiplicar depois.
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
