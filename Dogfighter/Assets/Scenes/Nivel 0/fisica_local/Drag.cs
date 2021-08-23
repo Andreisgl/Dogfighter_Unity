@@ -37,8 +37,8 @@ namespace Aeronave
                 //Define provisoriamente os valores do vetor de áreas do corpo.
                 areaCorpo[0] = 0.5f * 28f;  //1,5x a área das asas, no olhômetro    
                 areaCorpo[1] = 0.5f * 28f;  //1,5x a área das asas, no olhômetro  
-                areaCorpo[2] = 1.5f * 28f;  //1,5x a área das asas, no olhômetro
-                areaCorpo[3] = 1.5f * 28f;  //1,5x a área das asas, no olhômetro
+                areaCorpo[2] = 2f * 28f;  //2x a área das asas, no olhômetro
+                areaCorpo[3] = 2f * 28f;  //2x a área das asas, no olhômetro
                 areaCorpo[4] = 3f * 28f;    //3x a área das asas, no olhômetro
                 areaCorpo[5] = 3f * 28f;    //3x a área das asas, no olhômetro
                 
