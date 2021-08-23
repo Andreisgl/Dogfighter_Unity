@@ -45,10 +45,10 @@ namespace Aeronave
                 //Define provisoriamente os valores do CD do corpo.
                 areaCorpo[0] = 0.0175f; //Valor obtido na internet
                 areaCorpo[1] = 0.0175f; //Coloquei o mesmo do outro por preguiça
-                areaCorpo[2] = 1.98f;   //Valor de uma chapa paralela ao fluxo.
-                areaCorpo[3] = 1.98f;   //Valor de uma chapa paralela ao fluxo.
-                areaCorpo[4] = 1.98f;   //Valor de uma chapa paralela ao fluxo.
-                areaCorpo[5] = 1.98f;   //Valor de uma chapa paralela ao fluxo.
+                areaCorpo[2] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                areaCorpo[3] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                areaCorpo[4] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
+                areaCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
             
             //CD = 0f;
         }
