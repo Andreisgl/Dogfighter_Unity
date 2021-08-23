@@ -64,14 +64,14 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            
+
         }
 
-        public AnimationCurve curvaAreaZX;  //Indicará a interpolação dos valores de área ao girarem no eixo Y. (Frente e trás, cima e baixo)
-        public AnimationCurve curvaAreaZY;  //Indicará a interpolação dos valores de área ao girarem no eixo X. (Frente e trás, esquerda e direita)
+        public AnimationCurve curvaAreaZX;  //Indicará a interpolação dos valores de área ao girarem no eixo Y (Horizontal). (Frente e trás, cima e baixo)
+        public AnimationCurve curvaAreaZY;  //Indicará a interpolação dos valores de área ao girarem no eixo X (Vertical). (Frente e trás, esquerda e direita)
 
-        public AnimationCurve curvaCDZX;  //Indicará a interpolação dos valores de CD ao girarem no eixo Y. (Frente e trás, cima e baixo)
-        public AnimationCurve curvaCDZY;  //Indicará a interpolação dos valores de CD ao girarem no eixo X. (Frente e trás, esquerda e direita)
+        public AnimationCurve curvaCDZX;  //Indicará a interpolação dos valores de CD ao girarem no eixo Y (Horizontal). (Frente e trás, cima e baixo)
+        public AnimationCurve curvaCDZY;  //Indicará a interpolação dos valores de CD ao girarem no eixo X (Vertical). (Frente e trás, esquerda e direita)
 
         void inicializaCurvasArea()   //Inicializa os valores de Área das curvas de animação
         {
