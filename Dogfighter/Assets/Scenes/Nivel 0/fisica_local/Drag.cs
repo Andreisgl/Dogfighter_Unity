@@ -59,6 +59,11 @@ namespace Aeronave
             
         }
 
+        void calculaDrag()
+        {
+
+        }
+
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
         {
             //Essa função receberá valores automaticamente e será útil no futuro.
