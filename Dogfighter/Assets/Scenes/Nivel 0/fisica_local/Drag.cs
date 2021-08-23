@@ -118,7 +118,7 @@ namespace Aeronave
             curvaCDZX.AddKey(0f, cdCorpo[0]); //Frente
             curvaCDZX.AddKey(90f, cdCorpo[2]); //Direita
 
-            curvaCDZX.AddKey(180f, cdCorpo[1]); //Trás só que vindo do negativo
+            curvaCDZX.AddKey(180f, cdCorpo[1]); //Trás
             curvaCDZX.AddKey(-180f, cdCorpo[1]); //Trás só que vindo do negativo
 
             curvaCDZX.AddKey(-90f, cdCorpo[3]); //Esquerda
