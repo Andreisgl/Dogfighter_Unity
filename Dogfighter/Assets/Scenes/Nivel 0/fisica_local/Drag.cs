@@ -19,7 +19,7 @@ namespace Aeronave
         //Váriaveis para o cálculo do arrasto:
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
         float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
-        float areaCorpo = 0f; //Área de superfície do corpo do avião.  (m^2 - Metro quadrado)
+        float[] areaCorpo = new float[6]; //Área de superfície do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
         float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
 
 
@@ -31,7 +31,7 @@ namespace Aeronave
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
             densAr = 1.201f;
             //vel = 0f;
-            areaCorpo = 28f * 3f;   //Valor aproximado. 3 vezes a àrea das asas.
+            //areaCorpo;   //Valor aproximado. 3 vezes a àrea das asas.
             //CD = 0f;
         }
 
