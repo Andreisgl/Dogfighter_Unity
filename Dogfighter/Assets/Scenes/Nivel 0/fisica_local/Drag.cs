@@ -32,8 +32,10 @@ namespace Aeronave
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
             densAr = 1.201f;
             //vel = 0f;
-            //areaCorpo;   //Valor aproximado. 3 vezes a àrea das asas.
+            //areaCorpo;
             //CD = 0f;
+
+            atualizaAreasCorpo();
         }
 
         
@@ -44,7 +46,7 @@ namespace Aeronave
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
         {
-
+            //Essa função receberá valores automaticamente e será útil no futuro.
         }
     }
 
