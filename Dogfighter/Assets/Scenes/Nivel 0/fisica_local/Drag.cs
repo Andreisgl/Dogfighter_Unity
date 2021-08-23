@@ -72,6 +72,13 @@ namespace Aeronave
             curvaZX.AddKey(180f, areaCorpo[1]); //Trás
 
             curvaZX.AddKey(-90f, areaCorpo[3]); //Esquerda
+
+            //Gira no sentido horário. Pega dados de AoA Vertical.
+            curvaZY.AddKey(0f, areaCorpo[0]); //Frente
+            curvaZY.AddKey(90f, areaCorpo[4]); //Cima
+            curvaZY.AddKey(180f, areaCorpo[1]); //Trás
+
+            curvaZY.AddKey(-90f, areaCorpo[5]); //Baixo
             
         }
         void calculaDrag()
