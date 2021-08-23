@@ -29,9 +29,9 @@ namespace Aeronave
 
             //Valores das váriaveis de arrasto:
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
-            densAr = 0f;
+            densAr = 1.201f;
             //vel = 0f;
-            areaCorpo = 0f;
+            areaCorpo = 28f * 3f;   //Valor aproximado. 3 vezes a àrea das asas.
             //CD = 0f;
         }
 
