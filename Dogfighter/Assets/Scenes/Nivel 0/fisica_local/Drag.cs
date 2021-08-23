@@ -23,7 +23,7 @@ namespace Aeronave
                                           //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
         float[] CDCorpo = new float[6];   //Coeficiente de arrasto do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
                                           //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
-        float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
+        //float CD = 0f;  //Coeficiente de arrasto do corpo.  (Unidade sem dimensão)
 
 
         void Start()
