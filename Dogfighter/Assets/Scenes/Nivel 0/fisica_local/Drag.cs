@@ -67,7 +67,7 @@ namespace Aeronave
         {
             velLocal = transform.InverseTransformDirection(aero_rb.velocity);
 
-            Debug.Log( velLocal );
+            //Debug.Log( velLocal );
 
             atualizaVetor();
         }
@@ -77,7 +77,10 @@ namespace Aeronave
 
         void atualizaVetor()
         {
-
+            Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
+            float aux = 
+                velNorm.z * areaCorpo[0] * cdCorpo[0];
+            Debug.Log( aux );
         }
   
     }
