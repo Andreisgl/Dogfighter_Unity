@@ -76,13 +76,29 @@ namespace Aeronave
 
         void atualizaVetor()
         {
+            //EIXO X
+            if( velLocal.x < 0 )    //Se move para a direita
+                Debug.Log("direita");
+            else if( velLocal.x > 0 ) //Se move para a esquerda
+                Debug.Log("esquerda");
+            else                      //Não se move
+                Debug.Log("Neutro");
+
+            //EIXO Y
+            if( velLocal.y < 0 )    //Se move para cima
+                Debug.Log("cima");
+            else if( velLocal.y > 0 ) //Se move para baixo
+                Debug.Log("baixo");
+            else                      //Não se move
+                Debug.Log("Neutro");
+
+            //EIXO Z
             if( velLocal.z > 0 )    //Se move para frente
                 Debug.Log("Frente");
             else if( velLocal.z < 0 ) //Se move para trás
                 Debug.Log("Trás");
             else                      //Não se move
                 Debug.Log("Neutro");
-
         }
   
     }
