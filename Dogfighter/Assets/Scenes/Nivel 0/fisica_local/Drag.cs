@@ -52,7 +52,7 @@ namespace Aeronave
             
             //CD = 0f;
 
-            inicializaCurvas();
+            inicializaCurvasArea();
         }
 
         
@@ -64,7 +64,7 @@ namespace Aeronave
         public AnimationCurve curvaZX;  //Indicará a interpolação dos valores ao girarem no eixo Y. (Frente e trás, cima e baixo)
         public AnimationCurve curvaZY;  //Indicará a interpolação dos valores ao girarem no eixo X. (Frente e trás, esquerda e direita)
 
-        void inicializaCurvas()   //Inicializa os valores das curvas de animação
+        void inicializaCurvasArea()   //Inicializa os valores das curvas de animação
         {
             //Gira no sentido horário. Pega dados de AoA Horizontal.
             curvaZX.AddKey(0f, areaCorpo[0]); //Frente
