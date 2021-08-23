@@ -149,7 +149,7 @@ namespace Aeronave
         {
             //Drag = 0.5f * densAr * vel^2 * areaCorpo * cdCorpo
 
-            return 0.5f * densAr * Mathf.Pow(velLocal, 2) * area * cd;
+            return 0.5f * densAr * Mathf.Pow(vel, 2) * area * cd;
         }
 
         void atualizaAreasCorpo()   //Essa função insere valores no array "areaCorpo"
