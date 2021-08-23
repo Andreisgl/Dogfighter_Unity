@@ -69,7 +69,7 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            //Debug.Log( curvaAreaZX.Evaluate( ge ) );
+            Debug.Log( "Area ZX" + curvaAreaZX.Evaluate(aoa_Calc.getAoAHor()) );
         }
 
         public AnimationCurve curvaAreaZX;  //Indicará a interpolação dos valores de área ao girarem no eixo Y (Horizontal). (Frente e trás, cima e baixo)
