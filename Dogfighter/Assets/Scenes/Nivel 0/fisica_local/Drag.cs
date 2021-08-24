@@ -75,7 +75,7 @@ namespace Aeronave
 
             
 
-            atualizaVetor();
+            atualizaAreaCD();
         }
 
         Vector3 velLocal;
@@ -85,15 +85,22 @@ namespace Aeronave
         public AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
         public AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
-        void atualizaVetor()    //Essa função retorna ÁREA * CD para o cálculo da força de arrasto. Os outros valores (Velocidade e sua direção, densidade do ar) são adicionados posteriormente.
+        void atualizaAreaCD()    //Essa função retorna ÁREA * CD para o cálculo da força de arrasto. Os outros valores (Velocidade e sua direção, densidade do ar) são adicionados posteriormente.
         {
             Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
+            Vector3 aux;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
 
-            //Vector3 drag;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
-            //Debug.Log( drag );
+            aux.z = areaZ.Evaluate( velNorm.z ) * areaZ.Evaluate( velNorm.z );    //Associa essa componente do vetor ao valores de Área e CD para essa orientação específica.
+            aux.x = areaX.Evaluate( velNorm.x ) * areaX.Evaluate( velNorm.x ); 
+            aux.y = areaY.Evaluate( velNorm.y ) * areaY.Evaluate( velNorm.y ); 
+
+            Debug.Log( aux );
         }
 
-       
+       void calculaArrasto()   //Calcula a intensidade da força de arrasto
+       {
+
+       }
         
 
         void inicializaCurvaAreaCD(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area e CD. Recebe vetor e as três curvas, respectivamente.
