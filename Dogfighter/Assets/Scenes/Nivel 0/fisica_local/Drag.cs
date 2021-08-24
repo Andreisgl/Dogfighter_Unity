@@ -107,10 +107,7 @@ namespace Aeronave
             curvaY.AddKey(0, 0);             //Componente == 0
             curvaY.AddKey(-1, vetor[4]); //Orientado para cima
         }
-        void inicializaCurvaCD()
-        {
-            
-        }
+        
 
   
     }
