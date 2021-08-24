@@ -80,6 +80,10 @@ namespace Aeronave
             Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
 
             Vector3 drag;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
+
+            
+
+
             drag.z = velNorm.z * areaCorpo[0] * cdCorpo[0];
             drag.x = velNorm.x * areaCorpo[2] * cdCorpo[2];
             drag.y = velNorm.y * areaCorpo[4] * cdCorpo[4];
@@ -88,6 +92,20 @@ namespace Aeronave
 
             Debug.Log( drag.magnitude );
         }
+
+        //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
+        AnimationCurve areaX, areaY, areaZ;
+        AnimationCurve cdX, cdY, cdZ;
+
+        void inicializaCurvaArea()
+        {
+
+        }
+        void inicializaCurvaCD()
+        {
+            
+        }
+
   
     }
 
