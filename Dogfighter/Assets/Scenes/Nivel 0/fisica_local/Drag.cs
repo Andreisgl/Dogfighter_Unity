@@ -94,12 +94,12 @@ namespace Aeronave
         }
 
         //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
-        AnimationCurve areaX, areaY, areaZ;
-        AnimationCurve cdX, cdY, cdZ;
+        AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
+        AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
         void inicializaCurvaArea()
         {
-
+            areaX
         }
         void inicializaCurvaCD()
         {
