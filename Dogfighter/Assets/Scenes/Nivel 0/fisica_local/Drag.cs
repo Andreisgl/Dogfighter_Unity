@@ -70,7 +70,7 @@ namespace Aeronave
             //Debug.Log( velLocal );
 
             inicializaCurvaAreaCD(areaCorpo, areaX, areaY, areaZ);    //Inicializa a curva de área
-            inicializaCurvaAreaCD(cdCorpo, cdX, cdY, cdZ);    //Inicializa a curva de área
+            inicializaCurvaAreaCD(cdCorpo, cdX, cdY, cdZ);    //Inicializa a curva de CD
 
             atualizaVetor();
         }
