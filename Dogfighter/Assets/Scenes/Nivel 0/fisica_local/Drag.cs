@@ -83,14 +83,14 @@ namespace Aeronave
 
             
 
-
-            drag.z = velNorm.z * areaCorpo[0] * cdCorpo[0];
-            drag.x = velNorm.x * areaCorpo[2] * cdCorpo[2];
-            drag.y = velNorm.y * areaCorpo[4] * cdCorpo[4];
+            float aux;
+            aux = areaZ.Evaluate( velNorm.z );
+            aux = areaX.Evaluate( velNorm.x );
+            aux = areaY.Evaluate( velNorm.y );
             
 
 
-            Debug.Log( drag.magnitude );
+            //Debug.Log( drag );
         }
 
         //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
