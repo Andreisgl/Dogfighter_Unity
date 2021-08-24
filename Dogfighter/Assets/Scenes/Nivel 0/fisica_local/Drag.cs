@@ -78,7 +78,7 @@ namespace Aeronave
         
 
          //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
-        public AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
+        
 
         void atualizaVetor()    //Essa função retorna ÁREA * CD para o cálculo da força de arrasto. Os outros valores (Velocidade e sua direção, densidade do ar) são adicionados posteriormente.
         {
@@ -89,7 +89,7 @@ namespace Aeronave
         }
 
        
-
+        public AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
         public AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
         void inicializaCurvaAreaCD(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area e CD. Recebe vetor e as três curvas, respectivamente.
