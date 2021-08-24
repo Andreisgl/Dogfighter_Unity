@@ -69,7 +69,7 @@ namespace Aeronave
 
             //Debug.Log( velLocal );
 
-            inicializaCurvaArea(areaCorpo, areaX, areaY, areaZ);    //Inicializa a curva de área
+            inicializaCurvaAreaCD(areaCorpo, areaX, areaY, areaZ);    //Inicializa a curva de área
 
             atualizaVetor();
         }
@@ -92,7 +92,7 @@ namespace Aeronave
 
         public AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
-        void inicializaCurvaArea(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area e CD. Recebe vetor e as três curvas, respectivamente.
+        void inicializaCurvaAreaCD(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area e CD. Recebe vetor e as três curvas, respectivamente.
         {
             areaZ.AddKey(1, vetor[0]);  //Orientado para frente
             areaZ.AddKey(0, 0);             //Componente == 0
