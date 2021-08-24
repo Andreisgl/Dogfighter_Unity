@@ -90,9 +90,9 @@ namespace Aeronave
             Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
             Vector3 aux;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
 
-            aux.z = areaZ.Evaluate( velNorm.z ) * areaZ.Evaluate( velNorm.z );    //Associa essa componente do vetor ao valores de Área e CD para essa orientação específica.
-            aux.x = areaX.Evaluate( velNorm.x ) * areaX.Evaluate( velNorm.x ); 
-            aux.y = areaY.Evaluate( velNorm.y ) * areaY.Evaluate( velNorm.y ); 
+            aux.z = areaZ.Evaluate( velNorm.z ) * cdZ.Evaluate( velNorm.z );    //Associa essa componente do vetor ao valores de Área e CD para essa orientação específica.
+            aux.x = areaX.Evaluate( velNorm.x ) * cdX.Evaluate( velNorm.x ); 
+            aux.y = areaY.Evaluate( velNorm.y ) * cdY.Evaluate( velNorm.y ); 
 
             Debug.Log( aux );
         }
