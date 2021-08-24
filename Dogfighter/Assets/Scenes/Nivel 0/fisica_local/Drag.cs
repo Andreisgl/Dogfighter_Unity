@@ -99,7 +99,14 @@ namespace Aeronave
 
         void inicializaCurvaArea()
         {
-            areaX
+            areaZ.AddKey(1, areaCorpo[0]);  //Orientado para frente
+            areaZ.AddKey(-1, areaCorpo[1]); //Orientado para trás
+
+            areaX.AddKey(1, areaCorpo[3]);  //Orientado para a esquerda
+            areaX.AddKey(-1, areaCorpo[2]); //Orientado para a direita
+
+            areaY.AddKey(1, areaCorpo[5]);  //Orientado para baixo
+            areaY.AddKey(-1, areaCorpo[4]); //Orientado para cima
         }
         void inicializaCurvaCD()
         {
