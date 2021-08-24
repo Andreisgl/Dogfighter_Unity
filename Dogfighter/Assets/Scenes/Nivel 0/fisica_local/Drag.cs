@@ -57,8 +57,8 @@ namespace Aeronave
                 cdCorpo[5] = 1.98f;   //Valor de uma chapa perpendicular ao fluxo.
 
 
-        inicializaCurvaAreaCD(areaCorpo, areaX, areaY, areaZ);    //Inicializa a curva de área
-        inicializaCurvaAreaCD(cdCorpo, cdX, cdY, cdZ);    //Inicializa a curva de CD
+            inicializaCurvaAreaCD(areaCorpo, areaX, areaY, areaZ);    //Inicializa a curva de área
+            inicializaCurvaAreaCD(cdCorpo, cdX, cdY, cdZ);    //Inicializa a curva de CD
         }
 
         
