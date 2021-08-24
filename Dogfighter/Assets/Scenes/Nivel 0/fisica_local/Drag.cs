@@ -69,43 +69,41 @@ namespace Aeronave
 
             //Debug.Log( velLocal );
 
+            inicializaCurvaArea();
+
             atualizaVetor();
         }
 
         Vector3 velLocal;
         
 
+         //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
+        public AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
+
         void atualizaVetor()    //Essa função retorna ÁREA * CD para o cálculo da força de arrasto. Os outros valores (Velocidade e sua direção, densidade do ar) são adicionados posteriormente.
         {
             Vector3 velNorm = Vector3.Normalize( velLocal );    //Vetor de velocidade local normalizado.
 
-            Vector3 drag;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
-
-            
-
-            float aux;
-            aux = areaZ.Evaluate( velNorm.z );
-            aux = areaX.Evaluate( velNorm.x );
-            aux = areaY.Evaluate( velNorm.y );
-            
-
-
+            //Vector3 drag;   //Esse vetor junta as componentes para dar a magnitude exata do arrasto.
             //Debug.Log( drag );
         }
 
-        //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
-        AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
-        AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
+       
+
+        public AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
         void inicializaCurvaArea()
         {
             areaZ.AddKey(1, areaCorpo[0]);  //Orientado para frente
+            areaZ.AddKey(0, 0);             //Componente == 0
             areaZ.AddKey(-1, areaCorpo[1]); //Orientado para trás
 
             areaX.AddKey(1, areaCorpo[3]);  //Orientado para a esquerda
+            areaX.AddKey(0, 0);             //Componente == 0
             areaX.AddKey(-1, areaCorpo[2]); //Orientado para a direita
 
             areaY.AddKey(1, areaCorpo[5]);  //Orientado para baixo
+            areaY.AddKey(0, 0);             //Componente == 0
             areaY.AddKey(-1, areaCorpo[4]); //Orientado para cima
         }
         void inicializaCurvaCD()
