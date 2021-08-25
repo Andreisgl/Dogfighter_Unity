@@ -74,8 +74,8 @@ namespace Aeronave
             //Debug.Log( velLocal );
 
             
-
-            Debug.Log( calculaArrasto() );
+            //aero_rb.AddForce( calculaArrasto() * velLocal );
+            Debug.Log( calculaArrasto() + "    " + velLocal );
         }
 
         Vector3 velLocal;
