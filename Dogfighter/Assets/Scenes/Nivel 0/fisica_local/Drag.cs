@@ -22,7 +22,7 @@ namespace Aeronave
         
         //Váriaveis para o cálculo do arrasto:
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
-        float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
+        Vector3 vel; //Velocidade do ar usada nos cálculos.  (m/s - Metros por segundo)
         float[] areaCorpo = new float[6]; //Área de superfície do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
                                           //0: Frente, 1: Trás, 2: Direita, 3: Esquerda, 4: Cima, 5: Baixo
         float[] cdCorpo = new float[6];   //Coeficiente de arrasto do corpo do avião em todas as 6 direções!  (m^2 - Metro quadrado)
@@ -71,10 +71,12 @@ namespace Aeronave
         {
             velLocal = transform.InverseTransformDirection(aero_rb.velocity);
 
+            vel = aero_rb.velocity;
+
             //Debug.Log( velLocal );
 
             
-            aero_rb.AddForce( calculaArrasto() * -aero_rb.velocity );
+            aero_rb.AddForce( calculaArrasto() * -vel );
             Debug.Log( calculaArrasto() + "    " + aero_rb.velocity );
         }
 
@@ -103,7 +105,7 @@ namespace Aeronave
            
            Debug.Log( calculaAreaCD() );
 
-           return 0.5f * densAr * aero_rb.velocity.sqrMagnitude * calculaAreaCD();
+           return 0.5f * densAr * vel.sqrMagnitude * calculaAreaCD();
        }
         
 
