@@ -81,7 +81,7 @@ namespace Aeronave
         Vector3 velLocal;
         
 
-         //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
+        //Essas curvas têm tempo de 1 a -1, correspondendp às componentes do vetor Velocidade Normalizado.
         public AnimationCurve areaX, areaY, areaZ; //Representa a área de cada direção
         public AnimationCurve cdX, cdY, cdZ;   //Representa o CD de cada direção
 
