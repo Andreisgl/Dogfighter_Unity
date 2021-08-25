@@ -75,7 +75,7 @@ namespace Aeronave
 
             
 
-            calculaArrasto();
+            Debug.Log( calculaArrasto() );
         }
 
         Vector3 velLocal;
@@ -97,9 +97,13 @@ namespace Aeronave
             return aux.magnitude;
         }
 
-       void calculaArrasto()   //Calcula a intensidade da força de arrasto
+       float calculaArrasto()   //Calcula a intensidade da força de arrasto
        {
+           //Arrasto = 0.5 * densAr * velocidade^2 * (Area * CD)
+           
            Debug.Log( calculaAreaCD() );
+
+           return 0.5f * densAr * velLocal.sqrMagnitude * calculaAreaCD();
        }
         
 
