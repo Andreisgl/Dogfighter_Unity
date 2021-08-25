@@ -39,7 +39,7 @@ public class Controles : MonoBehaviour
         cRoll.setFator(1.0f);
         cYaw.setFator(1.0f);
 
-        cThrottle.setFator(76000.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
+        cThrottle.setFator(760000.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
     }
 
     // Update is called once per frame
