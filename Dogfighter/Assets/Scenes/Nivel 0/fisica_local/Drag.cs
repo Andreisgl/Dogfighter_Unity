@@ -74,8 +74,8 @@ namespace Aeronave
             //Debug.Log( velLocal );
 
             
-            //aero_rb.AddForce( calculaArrasto() * velLocal );
-            Debug.Log( calculaArrasto() + "    " + velLocal );
+            aero_rb.AddForce( calculaArrasto() * -aero_rb.velocity );
+            Debug.Log( calculaArrasto() + "    " + aero_rb.velocity );
         }
 
         Vector3 velLocal;
@@ -103,7 +103,7 @@ namespace Aeronave
            
            Debug.Log( calculaAreaCD() );
 
-           return 0.5f * densAr * velLocal.sqrMagnitude * calculaAreaCD();
+           return 0.5f * densAr * aero_rb.velocity.sqrMagnitude * calculaAreaCD();
        }
         
 
