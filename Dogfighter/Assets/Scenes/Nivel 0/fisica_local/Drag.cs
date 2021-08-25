@@ -107,7 +107,7 @@ namespace Aeronave
        }
         
 
-        void inicializaCurvaAreaCD(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area e CD. Recebe vetor e as três curvas, respectivamente.
+        void inicializaCurvaAreaCD(float []vetor, AnimationCurve curvaX, AnimationCurve curvaY, AnimationCurve curvaZ) //Essa função inicializa as curvas de Area/CD. Recebe vetor e as três curvas, respectivamente.
         {
             curvaZ.AddKey(1, vetor[0]);  //Orientado para frente
             curvaZ.AddKey(0, 0);             //Componente == 0
