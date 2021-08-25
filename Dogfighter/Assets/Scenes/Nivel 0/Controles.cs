@@ -35,9 +35,9 @@ public class Controles : MonoBehaviour
         aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
 
         //Definição dos fatores dos controles:  **Isso é provisório! Devo adicionar depois um script que aplica esses fatores baseado em dados pré-definidos de modelos de aeronaves!
-        cPitch.setFator(1.0f);
-        cRoll.setFator(1.0f);
-        cYaw.setFator(1.0f);
+        cPitch.setFator(0.4f);
+        cRoll.setFator(2.0f);
+        cYaw.setFator(0.2f);
 
         cThrottle.setFator(760000.0f);   //TODO: esse fator receberá futuramente dados do empuxo do motor!
     }
