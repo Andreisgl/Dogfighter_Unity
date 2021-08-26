@@ -41,12 +41,12 @@ namespace Aeronave
             densAr = 1.201f;
             //vel = 0f;
                 //Define provisoriamente os valores do vetor de áreas do corpo.
-                areaCorpo[0] = 0.25f * 28f;  //0,25x a área das asas, no olhômetro    
-                areaCorpo[1] = 0.25f * 28f;  //0,25x a área das asas, no olhômetro  
-                areaCorpo[2] = 2f * 28f;  //2x a área das asas, no olhômetro
-                areaCorpo[3] = 2f * 28f;  //2x a área das asas, no olhômetro
-                areaCorpo[4] = 3f * 28f;    //3x a área das asas, no olhômetro
-                areaCorpo[5] = 3f * 28f;    //3x a área das asas, no olhômetro
+                areaCorpo[0] = 1f * 1f;  //0,25x a área das asas, no olhômetro    
+                areaCorpo[1] = 1f * 1f;  //0,25x a área das asas, no olhômetro  
+                areaCorpo[2] = 1f * 1f;  //2x a área das asas, no olhômetro
+                areaCorpo[3] = 1f * 1f;  //2x a área das asas, no olhômetro
+                areaCorpo[4] = 1f * 1f;    //3x a área das asas, no olhômetro
+                areaCorpo[5] = 1f * 1f;    //3x a área das asas, no olhômetro
                 
                 //Define provisoriamente os valores do CD do corpo.
                 cdCorpo[0] = 0.0175f; //Valor obtido na internet
