@@ -7,7 +7,9 @@ public class Motor : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
 
     float entradaMotor = 0;
-    float potenciaMotor = 100;
+
+    [SerializeField]
+    float potenciaMotor = 0;
 
     float comandoMotor = 0;
 
@@ -40,5 +42,11 @@ public class Motor : MonoBehaviour
     void entradaControle() //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
         entradaMotor = Input.GetAxis("Throttle");
+    }
+
+    //Encapsulamento
+    public void setPotencia(float potencia)
+    {
+        potenciaMotor = potencia;
     }
 }
