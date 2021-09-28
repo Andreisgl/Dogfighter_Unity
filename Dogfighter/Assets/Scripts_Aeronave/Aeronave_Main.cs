@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Aeronave_Main : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody aero_rb;  //Cria um objeto RigidBody
+
     void Start()
+    {
+        aero_rb = GetComponent<Rigidbody>();    //aero_rb agora é o Rigidbody da aeronave atual
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
     }
