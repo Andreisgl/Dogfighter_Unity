@@ -5,7 +5,7 @@ using UnityEngine;
 /*
     Essa classe aplica os controles básicos da aeronave: Arfagem, Rolagem e Guinada (Pitch, Roll, Yaw).
 */
-public class Manche : MonoBehaviour
+public class AeroControles : MonoBehaviour
 {
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
 
