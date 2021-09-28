@@ -30,7 +30,7 @@ public class AeroControles : MonoBehaviour
     }
 
     
-    void entradaControles()    //Essa função lê e atualiza o valor das entradas dos controles
+    void entradaControles()    //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
         controles[0] = Input.GetAxis("Pitch");
         controles[1] = Input.GetAxis("Roll");
