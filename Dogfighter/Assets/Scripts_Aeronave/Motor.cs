@@ -7,6 +7,9 @@ public class Motor : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
 
     float entradaMotor = 0;
+    float potenciaMotor = 100;
+
+    float comandoMotor = 0;
 
     void Start()
     {
@@ -17,14 +20,25 @@ public class Motor : MonoBehaviour
     {
         
     }
-    // aero_rb.AddForce( indDrag * -aero_rb.velocity );
+    
     void FixedUpdate()
     {
-        Debug.Log("Entrada Motor: " + entradaMotor);
+        entradaControle();
+        calculaComando();
+        aplicaComando();
+        Debug.Log("COMANDO Motor: " + comandoMotor);
     }
-
+    
+    void aplicaComando()
+    {
+        aero_rb.AddForce( comandoMotor * aero_rb.transform.forward );
+    }
+    void calculaComando()
+    {
+        comandoMotor = entradaMotor * potenciaMotor;
+    }
     void entradaControle() //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
-        entradaMotor = Input.GetAxis("Pitch");
+        entradaMotor = Input.GetAxis("Throttle");
     }
 }
