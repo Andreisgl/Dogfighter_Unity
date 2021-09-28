@@ -13,18 +13,20 @@ public class AeroControles : MonoBehaviour
     //Vetores dos controles
         const int NUMCOMANDOS = 3;
         // 0: Pitch, 1: Roll, 2: Yaw.
-        float[] controles = new float[NUMCOMANDOS]; //As entradas brutas recebidas do jogador
+        float[] entradas = new float[NUMCOMANDOS]; //As entradas brutas recebidas do jogador
+        
+        [SerializeField]
         float[] fatores = new float[NUMCOMANDOS];   //Os fatores que multiplicam as entradas
-        float[] comandos = new float[NUMCOMANDOS];  //Os comandos resultantes da multiplicação dos controles e dos fatores
+        float[] comandos = new float[NUMCOMANDOS];  //Os comandos resultantes da multiplicação dos entradas e dos fatores
 
     void Start()
     {
         aero_rb = GetComponent<Rigidbody>();    //aero_rb agora é o Rigidbody da aeronave atual.
 
         //Definição PROVISÓRIA dos fatores
-            fatores[0] = 0.5f;
-            fatores[1] = 0.5f;
-            fatores[2] = 0.5f;
+            setFator(0.6f, 0);
+            setFator(0.6f, 1);
+            setFator(0.6f, 2);
     }
 
     void Update()
@@ -44,15 +46,22 @@ public class AeroControles : MonoBehaviour
     {
         for (int i=0; i<NUMCOMANDOS; i++)
         {
-            comandos[i] = controles[i] * fatores[i];
+            comandos[i] = entradas[i] * fatores[i];
         }
     }
     
     void entradaControles()    //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
-        controles[0] = Input.GetAxis("Pitch");
-        controles[1] = Input.GetAxis("Roll");
-        controles[2] = Input.GetAxis("Yaw");
+        entradas[0] = Input.GetAxis("Pitch");
+        entradas[1] = Input.GetAxis("Roll");
+        entradas[2] = Input.GetAxis("Yaw");
 
+    }
+
+
+    //Encapsulamtento:
+    public void setFator(float valor, int indice)
+    {
+        fatores[indice] = valor;
     }
 }
