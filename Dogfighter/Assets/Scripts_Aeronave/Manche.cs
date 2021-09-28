@@ -41,7 +41,7 @@ public class AeroControles : MonoBehaviour
 
         aplicaComandos();
 
-        Debug.Log("Comandos: " + comandos[0] + " , " + comandos[1] + " , " +  comandos[2] );
+        //Debug.Log("Comandos: " + comandos[0] + " , " + comandos[1] + " , " +  comandos[2] );
     }
 
     void aplicaComandos()   //Controla a aeronave de acordo com o comando calculado.
