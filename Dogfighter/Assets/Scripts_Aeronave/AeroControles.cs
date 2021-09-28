@@ -39,7 +39,14 @@ public class AeroControles : MonoBehaviour
         entradaControles();
         calculaComandos();
 
+        aplicaComandos();
+
         Debug.Log("Comandos: " + comandos[0] + " , " + comandos[1] + " , " +  comandos[2] );
+    }
+
+    void aplicaComandos()   //Controla a aeronave de acordo com o comando calculado.
+    {
+        aero_rb.transform.Rotate( comandos[0], comandos[2], -comandos[1] );
     }
     
     void calculaComandos()   //Essa função calcula a intensidade do comando multiplicando os valores das entradas do teclado com fatores pré-estabelecidos.
@@ -60,7 +67,7 @@ public class AeroControles : MonoBehaviour
 
 
     //Encapsulamtento:
-    public void setFator(float valor, int indice)
+    public void setFator(float valor, int indice)   //Índice:  0: Pitch, 1: Roll, 2: Yaw.
     {
         fatores[indice] = valor;
     }
