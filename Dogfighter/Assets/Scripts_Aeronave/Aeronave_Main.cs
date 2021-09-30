@@ -15,11 +15,16 @@ public class Aeronave_Main : MonoBehaviour
 {
     private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
     
+    //Variáveis CENTRAIS:
+        //AoA_Calc
+        float aoaVert;
+        float aoaHor;
+    
+
 
     void Start()
     {
         aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
-        
     }
 
     void Update()
@@ -29,7 +34,16 @@ public class Aeronave_Main : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log( "MAIN:  AoA V: " + aoa_Calc.getAoAVert() + "   AoA H: " + aoa_Calc.getAoAHor() );
+        atualizaVariaveisCentrais();
+        Debug.Log( "MAIN:  AoA V: " + aoaVert + "   AoA H: " + aoaHor );
+    }
+
+    void atualizaVariaveisCentrais()    //Essa função atualiza os valores das variáveis de cada
+    {
+        //AoA_Calc:
+            aoaVert = aoa_Calc.getAoAVert();
+            aoaHor = aoa_Calc.getAoAHor();
+
     }
 
 }
