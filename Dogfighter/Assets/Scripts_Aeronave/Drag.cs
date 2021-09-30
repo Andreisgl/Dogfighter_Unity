@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IndDrag : MonoBehaviour
+public class Drag : MonoBehaviour
 {
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
     
