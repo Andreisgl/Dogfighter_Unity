@@ -11,7 +11,7 @@ TODO:
     -Transferir dados de outras classes para cá.
     -Ver o que fazer com IndDrag.
 */
-public class Aeronave_Main : MonoBehaviour
+public class AeroMain : MonoBehaviour
 {
     private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
     
