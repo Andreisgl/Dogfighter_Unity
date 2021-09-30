@@ -7,7 +7,7 @@ public class AoA_Calc : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
 
     //Variáveis de física
-        private Vector3 velLocalNorm;   //Vetor que indica a Velocidade Local da aeronave.
+        private Vector3 velLocalNorm;   //Vetor normalizado que indica a direção da Velocidade Local da aeronave.
 
     void Start()
     {
