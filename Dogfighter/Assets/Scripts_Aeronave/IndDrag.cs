@@ -22,7 +22,7 @@ public class IndDrag : MonoBehaviour
     void FixedUpdate()
     {
         calculaFisica();
-        Debug.Log(velGlobal);
+        //Debug.Log(velGlobal);
     }
 
     void calculaIndDrag()
