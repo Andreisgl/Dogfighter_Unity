@@ -44,4 +44,14 @@ public class AoA_Calc : MonoBehaviour
 
     }
 
+    //Encapsulamento:
+    public float getAoAVert()
+    {
+        return aoaVert;
+    }
+    public float getAoAHor()
+    {
+        return aoaHor;
+    }
+
 }
