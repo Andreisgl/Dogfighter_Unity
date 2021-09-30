@@ -8,6 +8,8 @@ public class AoA_Calc : MonoBehaviour
 
     //Variáveis de física
         private Vector3 velLocalNorm;   //Vetor normalizado que indica a direção da Velocidade Local da aeronave.
+        float aoaVert = 0;  //Guarda o valor do Aoa Vertical.
+        float aoaHor = 0;   //Guarda o valor do Aoa Horizontal.
 
     void Start()
     {
@@ -24,7 +26,7 @@ public class AoA_Calc : MonoBehaviour
     {
         calculaFisica();
         calculaAoA();
-        Debug.Log("AoA V: " + aoaVert + "  -  AoA H:" + aoaHor);
+        //Debug.Log("AoA V: " + aoaVert + "  -  AoA H:" + aoaHor);
     }
 
     void calculaFisica()
@@ -33,8 +35,7 @@ public class AoA_Calc : MonoBehaviour
     }
 
     //Métodos de cálculo do AoA Vertical e AoA Horizontal:
-    float aoaVert = 0;
-    float aoaHor = 0;
+    
     void calculaAoA()
     {
         //Usa tangente para calcular o arco e o converte de radianos para graus.
