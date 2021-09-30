@@ -23,7 +23,7 @@ public class Aeronave_Main : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        Debug.Log( "MAIN:  AoA V: " + aoa_Calc.getAoAVert() + "   AoA H: " + aoa_Calc.getAoAHor() );
     }
 
 }
