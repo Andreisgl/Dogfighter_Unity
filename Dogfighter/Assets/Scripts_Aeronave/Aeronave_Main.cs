@@ -7,10 +7,12 @@ Essa classe reúne dados e estados provenientes de outras classes para acesso ma
 */
 public class Aeronave_Main : MonoBehaviour
 {
+    private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
     
 
     void Start()
     {
+        aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
         
     }
 
