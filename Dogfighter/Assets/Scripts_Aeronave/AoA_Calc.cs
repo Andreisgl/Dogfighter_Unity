@@ -30,4 +30,16 @@ public class AoA_Calc : MonoBehaviour
     {
         velLocalNorm = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Atualiza o vetor global velLocalNorm.
     }
+
+    //Métodos de cálculo do AoA Vertical e AoA Horizontal:
+    float aoaVert = 0;
+    float aoaHor = 0;
+    void calculaAoA()
+    {
+        //Usa tangente para calcular o arco e o converte de radianos para graus.
+        aoaVert = -Mathf.Atan2(velLocalNorm.y, velLocalNorm.z) * Mathf.Rad2Deg; //Calcula AoA Vertical
+        aoaHor = -Mathf.Atan2(velLocalNorm.x, velLocalNorm.z) * Mathf.Rad2Deg;  //Calculla AoA Horizontal
+
+    }
+
 }
