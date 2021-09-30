@@ -7,7 +7,7 @@ public class AoA_Calc : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
 
     //Variáveis de física
-        private Vector3 velLocal;   //Vetor que indica a Velocidade Local da aeronave.
+        private Vector3 velLocalNorm;   //Vetor que indica a Velocidade Local da aeronave.
 
     void Start()
     {
@@ -23,11 +23,11 @@ public class AoA_Calc : MonoBehaviour
     void FixedUpdate()
     {
         calculaFisica();
-        Debug.Log("velLocal : " + velLocal);
+        Debug.Log("velLocalNorm : " + velLocalNorm);
     }
 
     void calculaFisica()
     {
-        velLocal = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Atualiza o vetor global velLocal.
+        velLocalNorm = Vector3.Normalize( transform.InverseTransformDirection(aero_rb.velocity) );  //Atualiza o vetor global velLocalNorm.
     }
 }
