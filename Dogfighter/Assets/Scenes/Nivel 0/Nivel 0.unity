@@ -310,14 +310,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651956173}
-  - component: {fileID: 651956174}
   - component: {fileID: 651956175}
   - component: {fileID: 651956176}
-  - component: {fileID: 651956177}
-  - component: {fileID: 651956178}
-  - component: {fileID: 651956179}
-  - component: {fileID: 651956180}
-  - component: {fileID: 651956181}
   - component: {fileID: 651956183}
   - component: {fileID: 651956182}
   - component: {fileID: 651956184}
@@ -345,18 +339,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &651956174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbafb8495888fed4892b2928573bdb69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &651956175
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -387,110 +369,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 99324f32886a29a48858c9d466cb07a7, type: 3}
---- !u!114 &651956177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 504de10888a72e349b4208810cf3a246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aero_rb: {fileID: 0}
-  velLocal: {x: 0, y: 0, z: 0}
---- !u!114 &651956178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e278399b4dc29742aba103a7bfae1ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curva:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &651956179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a7b3e3486c01f4d847c56c8a177a3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &651956180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3f8950e16efe54fa90fff58b7d77f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  areaX:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  areaY:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  areaZ:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  cdX:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  cdY:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  cdZ:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &651956181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651956172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7964830ff3bd82040936202fedbf3f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &651956182
 MonoBehaviour:
   m_ObjectHideFlags: 0
