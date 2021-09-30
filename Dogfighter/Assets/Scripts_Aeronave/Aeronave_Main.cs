@@ -24,8 +24,4 @@ public class Aeronave_Main : MonoBehaviour
 
     }
 
-    void controles()
-    {
-        
-    }
 }
