@@ -28,7 +28,7 @@ public class Motor : MonoBehaviour
         entradaControle();
         calculaComando();
         aplicaComando();
-        Debug.Log("COMANDO Motor: " + comandoMotor);
+        //Debug.Log("COMANDO Motor: " + comandoMotor);
     }
     
     void aplicaComando()
