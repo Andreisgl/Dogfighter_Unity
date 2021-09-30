@@ -23,7 +23,7 @@ public class AoA_Calc : MonoBehaviour
     void FixedUpdate()
     {
         calculaFisica();
-        Debug.Log("velLocalNorm : " + velLocalNorm);
+        Debug.Log("AoA V: " + aoaVert + "  -  AoA H:" + aoaHor);
     }
 
     void calculaFisica()
