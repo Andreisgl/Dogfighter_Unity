@@ -35,7 +35,7 @@ public class AeroMain : MonoBehaviour
     void FixedUpdate()
     {
         atualizaVariaveisCentrais();
-        Debug.Log( "MAIN:  AoA V: " + aoaVert + "   AoA H: " + aoaHor );
+        //Debug.Log( "MAIN:  AoA V: " + aoaVert + "   AoA H: " + aoaHor );
     }
 
     void atualizaVariaveisCentrais()    //Essa função atualiza os valores das variáveis de cada
