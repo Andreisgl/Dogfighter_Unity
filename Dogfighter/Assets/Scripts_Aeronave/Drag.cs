@@ -18,6 +18,10 @@ public class Drag : MonoBehaviour
     //Variáveis de física
         private Vector3 velGlobal;   //Vetor que indica a direção e intensidade da Velocidade Local da aeronave.
         float valorArrasto; //Valor da força de arrasto (Drag) a ser aplicada em Newtons.
+        float cl;   //Valor do CL.
+
+        [SerializeField]
+        float arrInd;   //Valor do Arrasto Induzido (IndDrag)
 
     void Start()
     {
@@ -36,16 +40,25 @@ public class Drag : MonoBehaviour
     void FixedUpdate()
     {
         calculaFisica();
+        calculaArrInd();
+
+        aplicaArr();
         //Debug.Log(velGlobal);
+    }
+
+    void aplicaArr()    //Essa função aplica o Arrasto
+    {
+        aero_rb.AddForce(arrInd * -velGlobal);
     }
 
     void calculaArrInd()    //Calcula o Arrasto Induzido da aeronave.
     {
-        
+        arrInd = Mathf.Pow(cl, 2);
     }
 
     void calculaFisica()
     {
         velGlobal = aero_rb.velocity;  //Atualiza o vetor global velGlobal.
+        cl = calculaCL.getCL();
     }
 }
