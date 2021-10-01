@@ -12,7 +12,7 @@ public class CalculaCL : MonoBehaviour
     
     void Start()
     {
-        
+        iniciaCurvaCL();
     }
 
     
