@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+    Essa classe calcula o Coeficiente de Empuxo(CL) a partir do ângulo de ataque.
+*/  
+
+
 public class CalculaCL : MonoBehaviour
 {
-    /*
-    Essa classe calcula o Coeficiente de Empuxo(CL) a partir do ângulo de ataque.
-    */
-    [SerializeField]
-    AnimationCurve curva;   //Inicia a curva de CL.
+    //Inicialização de objetos de classes:
+    private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber variáveis centrais(AoA, nesse caso) para o cálculo nessa classe.
+    
+    //Variáveis de física:
+        [SerializeField]
+        float clAtual;  //Coeficiente de Empuxo(CL) atual.
+        float aoaVert;  //Ângulo de Ataque (AoA) vertical.
+        [SerializeField]
+        AnimationCurve curva;   //Inicia a curva de CL.
     
     void Start()
     {
+        aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
         iniciaCurvaCL();
     }
 
@@ -23,7 +34,20 @@ public class CalculaCL : MonoBehaviour
 
     void FixedUpdate()
     {
+        atualizaVariaveis();
+    }
 
+    void atualizaVariaveis()
+    {
+        //AoA:
+            aoaVert = aoa_Calc.getAoAVert();
+        //CL:
+            clAtual = getClFromAoA();
+    }
+
+    float getClFromAoA()
+    {
+        return curva.Evaluate( aoaVert );
     }
 
     
