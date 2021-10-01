@@ -8,7 +8,11 @@ public class AoA_Calc : MonoBehaviour
 
     //Variáveis de física
         private Vector3 velLocalNorm;   //Vetor normalizado que indica a direção da Velocidade Local da aeronave.
+
+        [SerializeField]
         float aoaVert = 0;  //Guarda o valor do Aoa Vertical.
+
+        [SerializeField]
         float aoaHor = 0;   //Guarda o valor do Aoa Horizontal.
 
     void Start()
