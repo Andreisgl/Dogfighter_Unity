@@ -16,9 +16,25 @@ public class Drag : MonoBehaviour
     Rigidbody aero_rb;  //Cria um objeto RigidBody.
     
     //Variáveis de física
+        [SerializeField]
         private Vector3 velGlobal;   //Vetor que indica a direção e intensidade da Velocidade Local da aeronave.
+
+        //[SerializeField]
         float valorArrasto; //Valor da força de arrasto (Drag) a ser aplicada em Newtons.
+
+        [SerializeField]
         float cl;   //Valor do CL.
+        //Coeficientes:
+            [SerializeField]
+            float cdi;  //Coeficiente de arrasto induzido.
+            float cd;   //Coeficiente de arrasto.
+        
+        //Cálculo do Arrasto:
+            float densAr = 1;   //Densidade do ar em kg/m^3. VALOR PROVISÓRIO!!
+
+            [SerializeField]
+            float veloc2;    //Velocidade ao quadrado.
+            float area = 28;     //Área da asa em m^2. VALOR PROVISÓRIO!!
 
         [SerializeField]
         float arrInd;   //Valor do Arrasto Induzido (IndDrag)
@@ -40,25 +56,45 @@ public class Drag : MonoBehaviour
     void FixedUpdate()
     {
         calculaFisica();
-        calculaArrInd();
+        
 
-        aplicaArr();
+        //aplicaArr();
         //Debug.Log(velGlobal);
+
+        
+
+        
     }
 
-    void aplicaArr()    //Essa função aplica o Arrasto
+    float calculaCDI()  //Calcula o coeficiente de Arrasto Induzido(CDI).
     {
-        aero_rb.AddForce(arrInd * -velGlobal);
+        return Mathf.Pow(cl, 2);
     }
 
+    float calculaArrasto(float coef)  //Fórmula simples de arrasto. Recebe um coeficiente, retorna a força.
+    {
+        return coef * densAr * (veloc2 /2) * area;
+    }
+
+    
+    /*
     void calculaArrInd()    //Calcula o Arrasto Induzido da aeronave.
     {
         arrInd = Mathf.Pow(cl, 2);
+    }
+    */
+
+    void aplicaArr()    //Essa função aplica a força de Arrasto.
+    {
+        aero_rb.AddForce(arrInd * -velGlobal);
     }
 
     void calculaFisica()
     {
         velGlobal = aero_rb.velocity;  //Atualiza o vetor global velGlobal.
-        cl = calculaCL.getCL();
+        cl = calculaCL.getCL(); //Atualiza CL.
+        cdi = calculaCDI(); //Atualiza CDI.
+        veloc2 = velGlobal.sqrMagnitude;    //Atualiza a velocidade ao quadrado da aeronave.
+        arrInd = calculaArrasto(cdi);   //Atualiza o valor do Arrasto Induzido (ArrInd)
     }
 }
