@@ -88,6 +88,6 @@ public class Drag : MonoBehaviour
         cl = calculaCL.getCL(); //Atualiza CL.
         cdi = calculaCDI(); //Atualiza CDI.
         veloc2 = velGlobal.sqrMagnitude;    //Atualiza a velocidade ao quadrado da aeronave.
-        arrInd = calculaArrasto(cdi);   //Atualiza o valor do Arrasto Induzido (ArrInd)
+        arrInd = calculaArrasto(cdi) / 3;   //Atualiza o valor do Arrasto Induzido (ArrInd)
     }
 }
