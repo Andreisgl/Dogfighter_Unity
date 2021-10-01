@@ -58,7 +58,7 @@ public class Drag : MonoBehaviour
         calculaFisica();
         
 
-        //aplicaArr();
+        aplicaArr();
         //Debug.Log(velGlobal);
 
         
@@ -76,13 +76,6 @@ public class Drag : MonoBehaviour
         return coef * densAr * (veloc2 /2) * area;
     }
 
-    
-    /*
-    void calculaArrInd()    //Calcula o Arrasto Induzido da aeronave.
-    {
-        arrInd = Mathf.Pow(cl, 2);
-    }
-    */
 
     void aplicaArr()    //Essa função aplica a força de Arrasto.
     {
