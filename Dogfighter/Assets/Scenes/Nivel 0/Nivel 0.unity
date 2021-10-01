@@ -415,9 +415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fatores:
-  - 0
-  - 0
-  - 0
+  - 0.1
+  - 1
+  - 0.1
 --- !u!114 &651956184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velGlobal: {x: 0, y: 0, z: 0}
   cl: 0
-  cdi: 0
+  cdi: 0.0175
   veloc2: 0
   arrInd: 0
 --- !u!114 &651956186

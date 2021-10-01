@@ -68,7 +68,7 @@ public class Drag : MonoBehaviour
 
     float calculaCDI()  //Calcula o coeficiente de Arrasto Induzido(CDI).
     {
-        return Mathf.Pow(cl, 2);
+        return Mathf.Pow(cl, 2) / (3.14f * 3.5f);
     }
 
     float calculaArrasto(float coef)  //Fórmula simples de arrasto. Recebe um coeficiente, retorna a força.
@@ -87,7 +87,8 @@ public class Drag : MonoBehaviour
         velGlobal = aero_rb.velocity;  //Atualiza o vetor global velGlobal.
         cl = calculaCL.getCL(); //Atualiza CL.
         cdi = calculaCDI(); //Atualiza CDI.
+            //cdi = 0.0175f;
         veloc2 = velGlobal.sqrMagnitude;    //Atualiza a velocidade ao quadrado da aeronave.
-        arrInd = calculaArrasto(cdi) / 3;   //Atualiza o valor do Arrasto Induzido (ArrInd)
+        arrInd = calculaArrasto(cdi);   //Atualiza o valor do Arrasto Induzido (ArrInd)
     }
 }
