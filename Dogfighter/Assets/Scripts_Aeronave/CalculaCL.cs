@@ -45,11 +45,6 @@ public class CalculaCL : MonoBehaviour
             clAtual = getCL();
     }
 
-    float getCL()
-    {
-        return curva.Evaluate( aoaVert );
-    }
-
     
     void iniciaCurvaCL()    //Inicia os valores da curva de CL. Os valores de CL variam de acordo com o Ângulo de Ataque (AoA)
     {
@@ -68,5 +63,11 @@ public class CalculaCL : MonoBehaviour
         curva.AddKey(-35f, -1.9f);
         
         curva.AddKey(-45f, 0f);
+    }
+
+    //Encapsulamento:
+    public float getCL()
+    {
+        return curva.Evaluate( aoaVert );
     }
 }
