@@ -42,10 +42,10 @@ public class CalculaCL : MonoBehaviour
         //AoA:
             aoaVert = aoa_Calc.getAoAVert();
         //CL:
-            clAtual = getClFromAoA();
+            clAtual = getCL();
     }
 
-    float getClFromAoA()
+    float getCL()
     {
         return curva.Evaluate( aoaVert );
     }
