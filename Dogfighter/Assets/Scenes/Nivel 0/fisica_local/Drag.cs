@@ -105,7 +105,7 @@ namespace Aeronave
            
            Debug.Log( calculaAreaCD() );
 
-           return 0.5f * densAr * vel.sqrMagnitude * calculaAreaCD();
+           return 0.5f * densAr * vel.magnitude * calculaAreaCD();
        }
         
 
