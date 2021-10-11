@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Aeronave
-{
+
 
     /*
         Essa classe aplica a força de Empuxo (Lift) das asas baseado em:
@@ -29,7 +28,7 @@ namespace Aeronave
             L = 0,5 * A * rho * CL * v^2
         */
 
-        private CL_AoA cl_AoA;
+        private CalculaCL calculaCL;  //Cria instância da classe Calcula para receber variáveis centrais(CL, nesse caso) para o cálculo nessa classe.
         Rigidbody aero_rb;  //Cria um objeto RigidBody
 
         //Váriaveis para o cálculo do empuxo:
@@ -42,7 +41,7 @@ namespace Aeronave
         {
             aero_rb = GetComponent<Rigidbody>();    //Considera o objeto atual o Rigidbody
 
-            cl_AoA = GetComponent<CL_AoA>();
+            calculaCL = GetComponent<CalculaCL>();    //Finaliza a criação da instância de AoA_Calc
             //Valores das váriaveis de empuxo:
             //ATENÇÃO!!! - TODO - Essas definições são provisórias. Esses dados serão recuperados de outras classes depois!
             
@@ -62,7 +61,8 @@ namespace Aeronave
 
         void FixedUpdate()
         {
-            CL = cl_AoA.getClFromAoA();
+            
+            CL = calculaCL.getCL();
             vel = transform.InverseTransformDirection(aero_rb.velocity).z;
 
             Debug.Log( calculaLift() );
@@ -81,4 +81,3 @@ namespace Aeronave
     }
 
 
-}
