@@ -15,7 +15,7 @@ public class AoA_Limiter : MonoBehaviour
 
     //Variáveis de física
         [SerializeField]
-        float aoaVert;
+        float aoaVert;  //AoA vertical atual da aeronave.
 
         [SerializeField]
         float maxAoa;   //AoA máximo da aeronave.
@@ -30,8 +30,9 @@ public class AoA_Limiter : MonoBehaviour
     {
         aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
 
+        //DECLARAÇÃO PROVISÓRIA DO AOA MÁXIMO!!!
         maxAoa = 20f;
-        iniciaCurvaLimite(maxAoa);
+        iniciaCurvaLimite(maxAoa);  //Inicia a curva de limitação, com o valor máximo de AoA como parâmetro.
     }
 
     void Update()
@@ -47,6 +48,7 @@ public class AoA_Limiter : MonoBehaviour
 
     void atualizaVariaveis()
     {
+        // VER DEPOIS !!!!!! Talvez eu permita a utilização flexível de outro tipo de ângulo depois, sem limitar ao AoA Vertical. 
         aoaVert = aoa_Calc.getAoAVert();
 
         multipLimite = curvaLimite.Evaluate(aoaVert);
