@@ -17,7 +17,11 @@ public class Manche : MonoBehaviour
         
         [SerializeField]
         float[] fatores = new float[NUMCOMANDOS];   //Os fatores que multiplicam as entradas
-        float[] comandos = new float[NUMCOMANDOS];  //Os comandos resultantes da multiplicação dos entradas e dos fatores
+        [SerializeField]
+        float[] limitadores = new float[NUMCOMANDOS];    //Multiplicador de entrada do limitador.
+        [SerializeField]
+        float[] comandos = new float[NUMCOMANDOS];  //Os comandos resultantes da multiplicação das entradas, dos fatores e dos limitadores.
+        
 
     void Start()
     {
@@ -27,6 +31,10 @@ public class Manche : MonoBehaviour
             setFator(0.6f, 0);
             setFator(0.6f, 1);
             setFator(0.6f, 2);
+        //Definição PROVISÓRIA dos LIMITADORES
+            limitadores[0] = 1;
+            limitadores[1] = 1;
+            limitadores[2] = 1;
     }
 
     void Update()
