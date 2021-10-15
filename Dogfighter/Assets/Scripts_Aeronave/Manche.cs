@@ -13,6 +13,8 @@ public class Manche : MonoBehaviour
     //Vetores dos controles
         const int NUMCOMANDOS = 3;
         // 0: Pitch, 1: Roll, 2: Yaw.
+        
+        [SerializeField]
         float[] entradas = new float[NUMCOMANDOS]; //As entradas brutas recebidas do jogador
         
         [SerializeField]
