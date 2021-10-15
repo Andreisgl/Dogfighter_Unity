@@ -71,7 +71,23 @@ public class Manche : MonoBehaviour
     }
     float comando(float entrada, float fator, float limitador)  //Calcula o comando a ser dado para um eixo específico usando entradas do teclado, fatores e limitadores.
     {
-        return entrada * fator * limitador;
+        //Bandeiras booleanas que indicam se a entrada e o fator são positivos ou negativos. Isso simplifica o código.
+        // 1 = POSITIVO, 0 = NEGATIVO.
+            bool entrPos;
+                if(entrada >= 0) {entrPos = true;}
+                else {entrPos = false;}
+            bool limitPos;
+                if(limitador >= 0) {limitPos = true;}
+                else {limitPos = false;}
+
+        if(entrPos == limitPos) //Se a direção(sinal) do limitador é igual à da entrada, usar o limitador...
+        {
+            return entrada * fator * Mathf.Abs(limitador);
+        }
+        else    //Se não, não limitar o movimento.
+        {
+            return entrada * fator;
+        }
     }
     
     
@@ -80,7 +96,6 @@ public class Manche : MonoBehaviour
         entradas[0] = Input.GetAxis("Pitch");
         entradas[1] = Input.GetAxis("Roll");
         entradas[2] = Input.GetAxis("Yaw");
-
     }
 
 
