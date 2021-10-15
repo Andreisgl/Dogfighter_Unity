@@ -47,7 +47,7 @@ public class Manche : MonoBehaviour
     void FixedUpdate()
     {
         entradaControles();
-        //calculaComandos();
+        atualizaComandos();
 
         aplicaComandos();
 
@@ -58,16 +58,22 @@ public class Manche : MonoBehaviour
     {
         aero_rb.transform.Rotate( comandos[0], comandos[2], -comandos[1] );
     }
+
     
-    /*
-    void calculaComandos()   //Essa função calcula a intensidade do comando multiplicando os valores das entradas do teclado com fatores pré-estabelecidos.
+    
+    
+    void atualizaComandos()
     {
         for (int i=0; i<NUMCOMANDOS; i++)
         {
-            comandos[i] = entradas[i] * fatores[i];
+            comandos[i] = comando(entradas[i], fatores[i], limitadores[i]);
         }
     }
-    */
+    float comando(float entrada, float fator, float limitador)  //Calcula o comando a ser dado para um eixo específico usando entradas do teclado, fatores e limitadores.
+    {
+        return entrada * fator * limitador;
+    }
+    
     
     void entradaControles()    //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
