@@ -90,6 +90,11 @@ public class AoA_Limiter : MonoBehaviour
             {
                 aoaVert = angulo;
             }
+        //float multipLimite
+            public float getMultpLimite()
+            {
+                return multipLimite;
+            }
 
     
 }
