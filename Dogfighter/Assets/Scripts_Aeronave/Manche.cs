@@ -74,7 +74,7 @@ public class Manche : MonoBehaviour
 
     void aplicaComandos()   //Controla a aeronave de acordo com o comando calculado.
     {
-        aero_rb.transform.Rotate( comandos[0], comandos[2], -comandos[1] );
+        aero_rb.transform.Rotate( -comandos[0], comandos[2], -comandos[1] );
     }
 
     
