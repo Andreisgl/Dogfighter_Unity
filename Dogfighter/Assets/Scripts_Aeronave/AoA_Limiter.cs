@@ -88,5 +88,11 @@ public class AoA_Limiter : MonoBehaviour
                 return maxAoa;
             }
 
+        //float aoaVert
+            void setAnguloLimitador(float angulo)    //Obtém o angulo no limitador
+            {
+                aoaVert = angulo;
+            }
+
     
 }
