@@ -11,7 +11,7 @@ public class Manche : MonoBehaviour
 
     //Inicialização de objetos de classes:
         private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber variáveis centrais(AoA, nesse caso) para o cálculo nessa classe.
-        private AoA_Limiter aoa_Limit;  //Cria instância da classe AoA_Limiter
+        private AoA_Limiter aoaVert_Limit;  //Cria instância da classe AoA_Limiter
 
 
     //Vetores dos controles
@@ -43,7 +43,7 @@ public class Manche : MonoBehaviour
         
         //Inicialização de objetos de classes:
             aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
-            aoa_Limit = GetComponent<AoA_Limit>();    //Finaliza a criação da instância de AoA_Limit
+            aoaVert_Limit = GetComponent<AoA_Limit>();    //Finaliza a criação da instância de AoA_Limit
 
         //Definição PROVISÓRIA dos fatores
             setFator(0.6f, 0);
