@@ -51,7 +51,16 @@ public class AoA_Limiter : MonoBehaviour
         // VER DEPOIS !!!!!! Talvez eu permita a utilização flexível de outro tipo de ângulo depois, sem limitar ao AoA Vertical. 
         aoaVert = aoa_Calc.getAoAVert();
 
-        multipLimite = curvaLimite.Evaluate(aoaVert);
+        multipLimite = calculaLimite();
+    }
+
+    float calculaLimite()
+    {
+        int aoaPos;    //Bandeira int que indica se o ângulo é positivo ou não. 1 = POSITIVO, -1 = NEGATIVO.
+            if(aoaVert >= 0) {aoaPos = 1;}
+            else {aoaPos = -1;}
+
+        return curvaLimite.Evaluate(aoaVert) * aoaPos;  //Calcula o valor baseado na funçlão da curva e o inverte ou não, baseado em aoaPos. 
     }
 
 
@@ -66,6 +75,19 @@ public class AoA_Limiter : MonoBehaviour
         curvaLimite.AddKey(max, 0);
         //curvaLimite.AddKey(180, 0);
     }
+
+    //ENCAPSULAMENTO
+        //float maxAoa
+        void setMaxAoA(float angulo)
+        {
+            maxAoa = angulo;
+            iniciaCurvaLimite(maxAoa);
+
+        }
+        float getMaxAoa()
+        {
+            return maxAoa;
+        }
 
     
 }
