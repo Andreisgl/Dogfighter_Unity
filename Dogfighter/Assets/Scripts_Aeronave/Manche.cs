@@ -66,11 +66,10 @@ public class Manche : MonoBehaviour
         aoaVert_Limit.setAnguloLimitador(aoaVert);  //Entrega o valor do AoA vertical à classe Aoa_Limiter para o cálculo da limitação.
 
         entradaControles();
+        atualizaLimitadores();
         atualizaComandos();
 
         aplicaComandos();
-
-        //Debug.Log("Comandos: " + comandos[0] + " , " + comandos[1] + " , " +  comandos[2] );
     }
 
     void aplicaComandos()   //Controla a aeronave de acordo com o comando calculado.
@@ -79,7 +78,10 @@ public class Manche : MonoBehaviour
     }
 
     
-    
+    void atualizaLimitadores()
+    {
+        limitadores[0] = aoaVert_Limit.getMultpLimite();
+    }
     
     void atualizaComandos()
     {
