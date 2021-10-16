@@ -75,18 +75,18 @@ public class AoA_Limiter : MonoBehaviour
 
     //ENCAPSULAMENTO
         //float maxAoa
-            void setMaxAoA(float angulo)
+            public void setMaxAoA(float angulo)
             {
                 maxAoa = angulo;
                 iniciaCurvaLimite(maxAoa);
             }
-            float getMaxAoa()
+            public float getMaxAoa()
             {
                 return maxAoa;
             }
 
         //float aoaVert
-            void setAnguloLimitador(float angulo)    //Obtém o angulo no limitador
+            public void setAnguloLimitador(float angulo)    //Obtém o angulo no limitador
             {
                 aoaVert = angulo;
             }
