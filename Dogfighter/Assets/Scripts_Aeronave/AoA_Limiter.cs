@@ -10,8 +10,6 @@ Ela recebe o ÂNGULO DE ATAQUE (AoA) e aplica um multiplicador <= 1 para limitar
 
 public class AoA_Limiter : MonoBehaviour
 {
-    //Inicialização de objetos de classes:
-    private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber variáveis centrais(AoA, nesse caso) para o cálculo nessa classe.
 
     //Variáveis de física
         [SerializeField]
@@ -28,7 +26,6 @@ public class AoA_Limiter : MonoBehaviour
 
     void Start()
     {
-        aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc
 
         //DECLARAÇÃO PROVISÓRIA DO AOA MÁXIMO!!!
         maxAoa = 20f;
@@ -49,7 +46,7 @@ public class AoA_Limiter : MonoBehaviour
     void atualizaVariaveis()
     {
         // VER DEPOIS !!!!!! Talvez eu permita a utilização flexível de outro tipo de ângulo depois, sem limitar ao AoA Vertical. 
-        aoaVert = aoa_Calc.getAoAVert();
+        
 
         multipLimite = calculaLimite();
     }
