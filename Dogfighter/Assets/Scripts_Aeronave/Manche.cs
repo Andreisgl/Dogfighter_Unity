@@ -43,7 +43,7 @@ public class Manche : MonoBehaviour
         
         //Inicialização de objetos de classes:
             aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc.
-            aoaVert_Limit = GetComponent<AoA_Limit>();    //Finaliza a criação da instância de AoA_Limit para AoA VERTICAL.
+            aoaVert_Limit = GetComponent<AoA_Limiter>();    //Finaliza a criação da instância de AoA_Limit para AoA VERTICAL.
 
         //Definição PROVISÓRIA dos fatores
             setFator(0.6f, 0);
@@ -62,7 +62,8 @@ public class Manche : MonoBehaviour
 
     void FixedUpdate()
     {
-        aoaVert = aoa_Calc.getAoAVert();
+        aoaVert = aoa_Calc.getAoAVert();    //Pega o valor do AoA vertical e o dá a essa variável
+        aoaVert_Limit.setAnguloLimitador(aoaVert);  //Entrega o valor do AoA vertical à classe Aoa_Limiter para o cálculo da limitação.
 
         entradaControles();
         atualizaComandos();
