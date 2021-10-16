@@ -19,11 +19,16 @@ public class Manche : MonoBehaviour
         
         [SerializeField]
         float[] fatores = new float[NUMCOMANDOS];   //Os fatores que multiplicam as entradas
+
         [SerializeField]
         float[] limitadores = new float[NUMCOMANDOS];    //Multiplicador de entrada do limitador.
+
         [SerializeField]
         float[] comandos = new float[NUMCOMANDOS];  //Os comandos resultantes da multiplicação das entradas, dos fatores e dos limitadores.
         
+        [SerializeField]
+        float aoaVertMax;   //Angulo de Ataque(AoA) Vertical MÁXIMO que a aeronave pode alcançar.
+
 
     void Start()
     {
