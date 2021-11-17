@@ -75,7 +75,17 @@ using UnityEngine;
             
             aero_rb.AddForce( calculaArrasto() * -vel );
             Debug.Log( calculaArrasto() + "    " + aero_rb.velocity );
+
+            
+            ARRTEMP = calculaArrasto();
+            AREACDTEMP = calculaAreaCD();
         }
+        //SÓ PARA TESTES!
+        [SerializeField]
+        float ARRTEMP;
+        
+        [SerializeField]
+        float AREACDTEMP;
 
         Vector3 velLocal;
         

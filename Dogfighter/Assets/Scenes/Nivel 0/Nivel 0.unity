@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 651956177}
   - component: {fileID: 651956183}
   - component: {fileID: 651956178}
+  - component: {fileID: 651956179}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -419,6 +420,55 @@ MonoBehaviour:
   maxAoa: 0
   multipLimite: 0
   curvaLimite:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &651956179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651956172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3f8950e16efe54fa90fff58b7d77f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ARRRTEMP: 0
+  areaX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaY:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaZ:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cdX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cdY:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cdZ:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
