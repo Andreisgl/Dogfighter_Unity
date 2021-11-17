@@ -112,7 +112,7 @@ using UnityEngine;
            
            Debug.Log( calculaAreaCD() );
 
-           return 0.5f * densAr * vel.sqrMagnitude * calculaAreaCD();
+           return 0.5f * densAr * vel.magnitude * calculaAreaCD()   * 2;
        }
         
 
