@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Aeronave
-{
-
     /*
         Essa classe calcula a força de Arrasto (Drag) de acordo com a orientação da aeronave relativa ao vetor de velocidade local.
         Isso é obtido interpolando os valores de Área e CD dos 6 lados da aeronave baseado no Ângulo de Ataque da aeronave.
@@ -13,7 +10,7 @@ namespace Aeronave
         -Densidade do ar ambiente
     */
 
-    public class Drag : MonoBehaviour
+    public class Drag_old : MonoBehaviour
     {
         //Componentes de outras classes:
             private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber o AoA e usar para o cálculo nessa classe
@@ -127,6 +124,3 @@ namespace Aeronave
 
   
     }
-
-
-}
