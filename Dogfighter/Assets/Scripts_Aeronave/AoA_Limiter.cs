@@ -28,7 +28,7 @@ public class AoA_Limiter : MonoBehaviour
     {
 
         //DECLARAÇÃO PROVISÓRIA DO AOA MÁXIMO!!!
-        maxAoa = 20f;
+        maxAoa = 10f;
         iniciaCurvaLimite(maxAoa);  //Inicia a curva de limitação, com o valor máximo de AoA como parâmetro.
     }
 

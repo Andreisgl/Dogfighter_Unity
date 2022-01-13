@@ -30,7 +30,7 @@ public class Drag : MonoBehaviour
             float cd;   //Coeficiente de arrasto.
         
         //Cálculo do Arrasto:
-            float densAr = 1;   //Densidade do ar em kg/m^3. VALOR PROVISÓRIO!!
+            float densAr = 0.4f;   //Densidade do ar em kg/m^3. VALOR PROVISÓRIO!!
 
             [SerializeField]
             float veloc2;    //Velocidade ao quadrado.
@@ -73,7 +73,7 @@ public class Drag : MonoBehaviour
 
     float calculaArrasto(float coef)  //Fórmula simples de arrasto. Recebe um coeficiente, retorna a força.
     {
-        return coef * densAr * (veloc2 /2) * area;
+        return coef * densAr * (veloc2 * 10) * area;
     }
 
 

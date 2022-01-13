@@ -47,7 +47,7 @@ public class Manche : MonoBehaviour
 
         //Definição PROVISÓRIA dos fatores
             setFator(0.6f, 0);
-            setFator(0.6f, 1);
+            setFator(1.6f, 1);
             setFator(0.6f, 2);
         //Definição PROVISÓRIA dos LIMITADORES
             limitadores[0] = 1;
