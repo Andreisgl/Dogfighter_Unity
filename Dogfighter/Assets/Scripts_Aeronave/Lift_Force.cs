@@ -61,18 +61,16 @@ using UnityEngine;
 
         void FixedUpdate()
         {
-            
-            CL = calculaCL.getCL();
-            vel = transform.InverseTransformDirection(aero_rb.velocity).z;
-
-            Debug.Log( calculaLift() );
-
-            aero_rb.AddForce( transform.up * calculaLift() );
+            float liftVert = calculaLift();
+            aero_rb.AddForce( transform.up * liftVert );
         }
 
         
         float calculaLift()
         {
+            CL = calculaCL.getCL();
+            vel = transform.InverseTransformDirection(aero_rb.velocity).z;
+
             // L = 0,5 . A . rho . CL . v^2
             return 0.5f * areaAsa * densAr * CL * Mathf.Pow(vel, 2);
         }
