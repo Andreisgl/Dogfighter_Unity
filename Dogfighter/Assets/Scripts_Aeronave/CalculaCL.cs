@@ -15,8 +15,13 @@ public class CalculaCL : MonoBehaviour
     
     //Variáveis de física:
         [SerializeField]
-        float clAtual;  //Coeficiente de Empuxo(CL) atual.
+        float clVertAtual;  //Coeficiente de Empuxo(CL) vertical atual.
+        [SerializeField]
+        float clHorAtual;  //Coeficiente de Empuxo(CL) horizontal atual.
+        
+
         float aoaVert;  //Ângulo de Ataque (AoA) vertical.
+        float aoaHor;  //Ângulo de Ataque (AoA) horizontal.
         [SerializeField]
         AnimationCurve curva;   //Inicia a curva de CL.
     
@@ -41,8 +46,10 @@ public class CalculaCL : MonoBehaviour
     {
         //AoA:
             aoaVert = aoa_Calc.getAoAVert();
+            aoaHor = aoa_Calc.getAoAHor();
         //CL:
-            clAtual = getCL();
+            clVertAtual = getVertCL();
+            clHorAtual = getHorCL();
     }
 
     
@@ -66,8 +73,12 @@ public class CalculaCL : MonoBehaviour
     }
 
     //Encapsulamento:
-    public float getCL()
+    public float getVertCL()
     {
         return curva.Evaluate( aoaVert );
+    }
+    public float getHorCL()
+    {
+        return curva.Evaluate( aoaHor );
     }
 }

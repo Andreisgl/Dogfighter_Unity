@@ -34,8 +34,14 @@ using UnityEngine;
         //Váriaveis para o cálculo do empuxo:
         float densAr = 0f; //Densidade do ar  (Kg/m^3 - Quilograma por metro cúbico)
         float vel = 0f; //Velocidade do ar.  (m/s - Metros por segundo)
+
         float areaAsa = 0f; //Área de superfície da asa.  (m^2 - Metro quadrado)
-        float CL = 0f;  //Coeficiente de empuxo da asa.  (Unidade sem dimensão)
+        float areaLeme = 0f; //Área da superfície do leme
+
+        [SerializeField]
+        float clAsa = 0f;  //Coeficiente de empuxo da asa.  (Unidade sem dimensão)
+        [SerializeField]
+        float clLeme = 0f;  //Coeficiente de empuxo do leme.  (Unidade sem dimensão)
         
         void Start()
         {
@@ -48,7 +54,9 @@ using UnityEngine;
             densAr = 1.201f;
             //vel = 1f;
             areaAsa = 28f;  //28m^2: Area da asa do F-16
-            //CL = 1;
+            areaLeme = 6f; //Valor arbitrário
+            //clAsa = 0;
+            //clLeme = 0;
 
 
         }
@@ -61,18 +69,24 @@ using UnityEngine;
 
         void FixedUpdate()
         {
-            float liftVert = calculaLift();
+            clAsa = calculaCL.getVertCL();
+            clLeme = calculaCL.getHorCL();
+
+            float liftVert = calculaLift(areaAsa, clAsa);
+            float liftHor = calculaLift(areaLeme, clLeme);
+
             aero_rb.AddForce( transform.up * liftVert );
+            aero_rb.AddForce( transform.right * liftHor );
         }
 
         
-        float calculaLift()
+        float calculaLift(float area, float CL)
         {
-            CL = calculaCL.getCL();
+            
             vel = transform.InverseTransformDirection(aero_rb.velocity).z;
 
             // L = 0,5 . A . rho . CL . v^2
-            return 0.5f * areaAsa * densAr * CL * Mathf.Pow(vel, 2);
+            return 0.5f * area * densAr * CL * Mathf.Pow(vel, 2);
         }
 
 

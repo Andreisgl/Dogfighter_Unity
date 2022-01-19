@@ -85,7 +85,7 @@ public class Drag : MonoBehaviour
     void calculaFisica()
     {
         velGlobal = aero_rb.velocity;  //Atualiza o vetor global velGlobal.
-        cl = calculaCL.getCL(); //Atualiza CL.
+        cl = calculaCL.getVertCL(); //Atualiza CL.
         cdi = calculaCDI(); //Atualiza CDI.
             //cdi = 0.0175f;
         veloc2 = velGlobal.magnitude;    //Atualiza a velocidade ao quadrado da aeronave.
