@@ -12,6 +12,7 @@ public class Manche : MonoBehaviour
     //Inicialização de objetos de classes:
         private AoA_Calc aoa_Calc;  //Cria instância da classe AoA_Calc para receber variáveis centrais(AoA, nesse caso) para o cálculo nessa classe.
         private AoA_Limiter aoaVert_Limit;  //Cria instância da classe AoA_Limiter para AoA VERTICAL.
+        private AoA_Limiter aoaHor_Limit;  //Cria instância da classe AoA_Limiter para AoA VERTICAL.
 
 
     //Vetores dos controles
@@ -32,9 +33,13 @@ public class Manche : MonoBehaviour
         
         [SerializeField]
         float aoaVertMax;   //Angulo de Ataque(AoA) Vertical MÁXIMO que a aeronave pode alcançar.
+        [SerializeField]
+        float aoaHorMax;   //Angulo de Ataque(AoA) Horizontal MÁXIMO que a aeronave pode alcançar.
 
         [SerializeField]
         float aoaVert;  //AoA vertical atual da aeronave.
+        [SerializeField]
+        float aoaHor;  //AoA horizontal atual da aeronave.
 
 
     void Start()
@@ -44,6 +49,7 @@ public class Manche : MonoBehaviour
         //Inicialização de objetos de classes:
             aoa_Calc = GetComponent<AoA_Calc>();    //Finaliza a criação da instância de AoA_Calc.
             aoaVert_Limit = GetComponent<AoA_Limiter>();    //Finaliza a criação da instância de AoA_Limit para AoA VERTICAL.
+            aoaHor_Limit = GetComponent<AoA_Limiter>();    //Finaliza a criação da instância de AoA_Limit para AoA VERTICAL.
 
         //Definição PROVISÓRIA dos fatores
             setFator(0.6f, 0);
@@ -63,7 +69,10 @@ public class Manche : MonoBehaviour
     void FixedUpdate()
     {
         aoaVert = aoa_Calc.getAoAVert();    //Pega o valor do AoA vertical e o dá a essa variável
+        aoaHor = aoa_Calc.getAoAHor();    //Pega o valor do AoA horizontal e o dá a essa variável
+        
         aoaVert_Limit.setAnguloLimitador(aoaVert);  //Entrega o valor do AoA vertical à classe Aoa_Limiter para o cálculo da limitação.
+        aoaHor_Limit.setAnguloLimitador(aoaHor);
 
         entradaControles();
         atualizaLimitadores();
@@ -81,6 +90,7 @@ public class Manche : MonoBehaviour
     void atualizaLimitadores()
     {
         limitadores[0] = aoaVert_Limit.getMultpLimite();
+        limitadores[2] = aoaHor_Limit.getMultpLimite();
     }
     
     void atualizaComandos()

@@ -13,7 +13,7 @@ public class AoA_Limiter : MonoBehaviour
 
     //Variáveis de física
         [SerializeField]
-        float aoaVert;  //AoA vertical atual da aeronave.
+        float aoa;  //AoA atual da aeronave.
 
         [SerializeField]
         float maxAoa;   //AoA máximo da aeronave.
@@ -54,10 +54,10 @@ public class AoA_Limiter : MonoBehaviour
     float calculaLimite()
     {
         int aoaPos;    //Bandeira int que indica se o ângulo é positivo ou não. 1 = POSITIVO, -1 = NEGATIVO.
-            if(aoaVert >= 0) {aoaPos = 1;}
+            if(aoa >= 0) {aoaPos = 1;}
             else {aoaPos = -1;}
 
-        return curvaLimite.Evaluate(aoaVert) * aoaPos;  //Calcula o valor baseado na funçlão da curva e o inverte ou não, baseado em aoaPos. 
+        return curvaLimite.Evaluate(aoa) * aoaPos;  //Calcula o valor baseado na funçlão da curva e o inverte ou não, baseado em aoaPos. 
     }
 
 
@@ -85,10 +85,10 @@ public class AoA_Limiter : MonoBehaviour
                 return maxAoa;
             }
 
-        //float aoaVert
+        
             public void setAnguloLimitador(float angulo)    //Obtém o angulo no limitador
             {
-                aoaVert = angulo;
+                aoa = angulo;
             }
         //float multipLimite
             public float getMultpLimite()
