@@ -18,24 +18,25 @@ Essa classe contém os parâmetros da aeronave, como:
 
 */
 
-float pitchFactor;
-float rollFactor;
-float yawFactor;
-
-float limiterVertAoa;
-float limiterHorAoa;
-
-float weight;
-
-float enginePower;
-
-float wingArea;
-
-float[] surfaceArea;
-float[] dragCoefficient;
 
 public class AircraftSpecs : MonoBehaviour
 {
+    
+    float pitchFactor = 0.6f;
+    float rollFactor = 1.6f;
+    float yawFactor = 0.6f;
+
+    float limiterVertAoa = 20f;
+    float limiterHorAoa = 10f;
+
+    float weight;
+
+    float enginePower;
+
+    float wingArea;
+    
+    float[] surfaceArea;
+    float[] dragCoefficient;
     void Start()
     {
         
