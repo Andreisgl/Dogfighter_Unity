@@ -29,14 +29,14 @@ public class AircraftSpecs : MonoBehaviour
     float limiterVertAoa = 20f;
     float limiterHorAoa = 10f;
 
-    float weight;
+    float mass = 8000; //Aircraft mass in kg.
 
-    float enginePower;
+    float enginePower = 160000.0f; //Max engine thrust in N.
 
-    float wingArea;
-    
-    float[] surfaceArea;
-    float[] dragCoefficient;
+    float wingArea = 28f; //In m^2.
+
+    //float[] surfaceArea;
+    //float[] dragCoefficient;
     void Start()
     {
         
