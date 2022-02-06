@@ -124,15 +124,22 @@ public class Manche : MonoBehaviour
     
     void entradaControles()    //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     {
+        /*
         entradas[0] = Input.GetAxis("Pitch");
         entradas[1] = Input.GetAxis("Roll");
         entradas[2] = Input.GetAxis("Yaw");
+        */
     }
 
 
-    //Encapsulamtento:
+    //Encapsulamento:
     public void setFator(float valor, int indice)   //Índice:  0: Pitch, 1: Roll, 2: Yaw.
     {
         fatores[indice] = valor;
+    }
+
+    public void setInput(float value, int index) //Get player input from another class
+    {
+        entradas[index] = value;
     }
 }
