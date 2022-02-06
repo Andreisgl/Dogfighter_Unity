@@ -41,7 +41,7 @@ public class Motor : MonoBehaviour
     }
     void entradaControle() //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     { 
-        entradaMotor = Input.GetAxis("Throttle");
+        //entradaMotor = Input.GetAxis("Throttle");
         if (entradaMotor <= 0)
         {
             entradaMotor = 0.5f;
@@ -52,5 +52,10 @@ public class Motor : MonoBehaviour
     public void setPotencia(float potencia)
     {
         potenciaMotor = potencia;
+    }
+
+    public void setInput(float value)
+    {
+        entradaMotor = value;
     }
 }
