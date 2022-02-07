@@ -24,20 +24,32 @@ public class MultiplayerPlayerController : NetworkBehaviour
     
     //public GameObject CameraMountPoint;
 
+
+    public override void OnStartLocalPlayer()
+    {
+        Camera.main.transform.SetParent(transform);
+        Camera.main.transform.localPosition = new Vector3(0, 0, 0);
+    }
+
+
     void Start()
     {
         manche = GetComponent<Manche>(); //Finalize creation of class
         motor = GetComponent<Motor>();
 
-        GameObject CameraMountPoint = GameObject.Find("CameraMountPoint");
         
-        if (true) //isLocalPlayer
+        
+        /*
+        if (isLocalPlayer) //isLocalPlayer
         {
+            GameObject CameraMountPoint = GameObject.Find("CameraMountPoint");
+
             Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
             cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point
             cameraTransform.position = CameraMountPoint.transform.position;  //Set position/rotation same as the mount point
             cameraTransform.rotation = CameraMountPoint.transform.rotation;
         }
+        */
         
     }
 
