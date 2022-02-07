@@ -211,9 +211,9 @@ GameObject:
   - component: {fileID: 3285105655171838284}
   - component: {fileID: 3285105655171838285}
   - component: {fileID: 3285105655171838282}
+  - component: {fileID: 6703261311972929539}
   - component: {fileID: 5593921615894868461}
   - component: {fileID: 4973001340560749974}
-  - component: {fileID: 6703261311972929539}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -473,6 +473,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70d222789df68b41958a35c05fb565b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6703261311972929539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285105655171838290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f371268c7a1407749926a8cbdb16c567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!114 &5593921615894868461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,26 +532,12 @@ MonoBehaviour:
   catchupMultiplier: 0.1
   onlySyncOnChange: 1
   bufferResetMultiplier: 5
-  positionSensitivity: 0.01
-  rotationSensitivity: 0.01
-  scaleSensitivity: 0.01
+  positionSensitivity: 0.001
+  rotationSensitivity: 0.001
+  scaleSensitivity: 0.001
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!114 &6703261311972929539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3285105655171838290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f371268c7a1407749926a8cbdb16c567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!1 &3285105655363972444
 GameObject:
   m_ObjectHideFlags: 0
