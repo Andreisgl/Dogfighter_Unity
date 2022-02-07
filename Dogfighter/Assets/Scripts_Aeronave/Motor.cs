@@ -11,6 +11,7 @@ public class Motor : MonoBehaviour
     [SerializeField]
     float potenciaMotor = 160000.0f;
 
+    [SerializeField]
     float comandoMotor = 0;
 
     void Start()
@@ -42,9 +43,15 @@ public class Motor : MonoBehaviour
     void entradaControle() //Essa função lê as entradas dos controles e passa esse valor ao vetor global controles[].
     { 
         //entradaMotor = Input.GetAxis("Throttle");
-        if (entradaMotor <= 0)
+        if (entradaMotor >= 0)
         {
-            entradaMotor = 0.5f;
+            entradaMotor += 0.5f;
+            if (entradaMotor >= 1f)
+                entradaMotor = 1f;
+        }
+        else if (entradaMotor < 0)
+        {
+            entradaMotor = 0;
         }
     }
 
