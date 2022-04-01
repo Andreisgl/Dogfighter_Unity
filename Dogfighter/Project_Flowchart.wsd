@@ -1,0 +1,75 @@
+@startuml Dogfighter
+
+class Aeromain
+{
+    float global_speed
+    float local_speed
+
+    float local_air_density
+
+    float wing_area
+    float wingspan
+    float wing_efficiency
+
+    float engine_thrust_idle
+    float engine_thrust_burner
+}
+
+class Aoa_Calc
+{
+    float aoa_vert
+    float aoa_hor
+}
+
+class AoA_Limiter
+
+class CalculaCL
+{
+    float get_cl()
+}
+class Lift
+{
+    float lift_force
+
+    get_lift(float cl, float velocity, float air_density, float wing_area)
+}
+class Drag
+{
+    float get_drag_force(float coefficient, float velocity, float air_density, float area)
+    
+}
+class CalculaCD
+{
+    float get_cd()
+}
+class Get_X_Sect_Area
+{
+    float get_area()
+}
+class CalculaCDI
+{
+    float get_cdi(float cl, float efficiency)
+}
+class Engine
+{
+    float engine_force
+}
+class Manche
+
+
+Lift <-- Aeromain : < local_speed\nwing_area\n local_air_density
+Lift <-- CalculaCL : < cl
+
+CalculaCL <-- Aoa_Calc : < aoa_vert
+
+Drag <-- Aeromain : < local_speed\n local_air_density 
+Drag <-- CalculaCD : < cd
+Drag <-- Get_X_Sect_Area : < x_sect_area
+
+CalculaCDI <-- Aeromain : < wingspan\n wing_efficiency
+CalculaCDI <-- CalculaCL : < cl
+CalculaCDI --> Drag : > cdi
+
+Engine <-- Aeromain : < engine_thrust_idle\n engine_thrust_burner
+
+@enduml
